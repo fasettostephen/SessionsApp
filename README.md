@@ -2,7 +2,7 @@
 	<a href="enei.pt"><img src="http://saramgsilva.github.io/XamarinWorkshop/images/1010ENEIHeader.png"/></a>
 </MTMarkdownOptions>
 
-[![Join the chat at https://gitter.im/saramgsilva/XamarinWorkshop](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/saramgsilva/XamarinWorkshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 **Xamarin Workshop**
 
 
@@ -23,31 +23,21 @@
  
 
 ##  :white_medium_square: Scope
-This workshop will be realized in [1010 ENEI](https://enei.pt/) at [University of Coimbra (Portugal)](http://www.uc.pt/en), March 28th 2015.
 
-> The **Portuguese National Meeting of IT Students (ENEI)** is an annual event which main goal is to gather the national IT student community for a few days. 
-ENEI was designed to allow access to new knowledge as well as to promote the sharing of experience, networking and social activities. The 10th edition will take place this year (2015) in Coimbra, from the 27th to 30th of March.
+This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) which original content is avaible [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository to create a Xamarin Community Workshop as a white brand which the main goal is to any developer or user group costumize it to theirs events.
 
-:warning: The Workshop will be presented in portuguese.
-
+:warning: At this moment it is a clone from the original and it will be redraw to remove all about the 1010 ENEI event.
+ 
 
 ##  :white_medium_square: Abstract
 
-In this [Xamarin Workshop](https://enei.pt/eventos/xamarin/), you will learn what's Xamarin and its products, how to create mobile cross-platform applications, using Xamarin for Android, iOS and Windows. You will learn the two most used patterns in this kind of applications and at the end you will create your own 1010 ENEI Sessions App.
+In this [Xamarin Workshop](https://enei.pt/eventos/xamarin/), you will learn what's Xamarin and its products, how to create mobile cross-platform applications, using Xamarin for Android, iOS and Windows. You will learn the two most used patterns in this kind of applications and at the end you will create your own Sessions App.
 
 
 ## :white_medium_square:  Requirements
 
 
-:pushpin: Each student should get your own Xamarin Student License for free in [xamarin.com/student](https://xamarin.com/student).
-
-
-![ENEI Logo](Guides/ImagesForGuides/students.png)
-
-
-If you know portuguese language, you can read the article in [Programar EMagazine](http://www.revista-programar.info/): ["Xamarin: Sem custos para estudantes"](http://www.revista-programar.info/artigos/xamarin-sem-custos-para-estudantes/).
-
-**Each student should:**
+**Each developer should:**
 
 * Have a Windows or a Mac device;
 * Install [Xamarin Studio](http://xamarin.com/download);
@@ -61,7 +51,7 @@ If you know portuguese language, you can read the article in [Programar EMagazin
 
 1. If you have a Windows device you can create Windows and Android applications. To create iOS applications is always required a Mac, and in this case you can create iOS and Android application using Xamarin Studio. With a Mac and Windows running in Parallels or VMware is possible to create the three targets at the same time (but is required a Windows Phone device to do the deploy!).
 2. Xamarin Plugin for Visual Studio in only available for Business plan and for developers that participate in Open Source projects.
-
+3. Each student should get your own Xamarin Student License for free in [xamarin.com/student](https://xamarin.com/student).
 
 
 
