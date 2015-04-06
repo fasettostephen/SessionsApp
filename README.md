@@ -92,6 +92,8 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 [7. Add support to WinRT apps](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [8. Change the App.cs to App.xaml](src/8. Change the App.cs to App.xaml) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [9. Use MVVM pattern](src/9.%20Use%20MVVM%20Pattern) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[10. Move ItemTemplate to Resources](src/9.%20Move%20ItemTemplate%20to%20Resources) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
+
 
 ## :white_medium_square: Guides
 
@@ -122,6 +124,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 	7. [Add support for WinRT Apps](Guides/7.%20Add%20support%20for%20WinRT%20Apps.md)
 	8. [Change the App.cs to App.xaml](Guides/8.%20Change%20the%20App.cs%20to%20App.xaml%20copy.md)
 	9. [Use MVVM pattern](Guides/9.%20Use%20MVVM%20pattern.md)
+	10. [Move ItemTemplate to Resources](10.%20Move%20ItemTemplate%20to%20Resources.md)
 * [Wrapping Up](Guides/Wrapping%20Up.md)
 	 
 * [Complete Guide: 1010 ENEI || Xamarin Workshop](Guides/1010ENEIGuide.md)  

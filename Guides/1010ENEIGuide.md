@@ -35,6 +35,7 @@
 	7. [Add support for WinRT Apps](#7-add-support-for-winrt-apps)
 	8. [Change the App.cs to App.xaml](#8-change-the-appcs-to-appxaml)
 	9. [Use MVVM pattern](#9-use-mvvm-pattern)
+    10. [Move ItemTemplate to Resources](#10-move-itemtemplate-to-resources)
 * [Wrapping Up](#wrapping-up)
 
 ## Scope
@@ -1694,6 +1695,147 @@ And in the constructor is required to initialize each one, as following:
 > To learn more about this subject is recommend to read the following articles:XAML Basics Contents
 *  [Overview](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/#Overview)*  [Part 1. Getting Started with XAML](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/getting_started_with_xaml)*  [Part 2. Essential XAML Syntax](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/essential_xaml_syntax)
 *  [Part 3. XAML Markup Extensions](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/xaml_markup_extensions)*  [Part 4. Data Binding Basics](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_binding_basics)*  [Part 5. From Data Binding to MVVM](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_bindings_to_mvvm)
+
+
+### 10. Move ItemTemplate to Resources
+
+
+
+In the last two step you learned to create an App class using XAML approach and how to use MVVM pattern, to separate the UI to the logic. In this step you learn how extract the DataTemplate from the listview’s Itemtemplate to Resources.
+
+In the App.xaml prepare the code to add the DataTemplate, for it you need to define the Application’s Resources as following:
+
+     <?xml version="1.0" encoding="utf-8" ?>
+     <Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ENEI.SessionsApp.App">
+     <Application.Resources>
+       <ResourceDictionary>
+     
+       </ResourceDictionary>
+     </Application.Resources>
+    </Application>
+
+
+And then copy the DataTemplate defined inside the ListView’s ItemTemplate:
+
+
+    <ListView x:Name="SessionsList"
+               Grid.Row="1"
+               RowHeight="{Binding Converter={StaticResource RowHeightConverter}}"
+               ItemSelected="SessionsList_OnItemSelected"
+               ItemsSource="{Binding Sessions}"
+               SeparatorColor="#0094FF">
+     <ListView.ItemTemplate>
+       <DataTemplate>
+        <!—this DataTemplate-->
+       </DataTemplate>
+    </ListView.ItemTemplate>
+
+To inside the **ResourceDictionary**, as following:
+
+
+    <?xml version="1.0" encoding="utf-8" ?>
+    <Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ENEI.SessionsApp.App">
+     <Application.Resources>
+      <ResourceDictionary>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+             <Grid BackgroundColor="Transparent" Padding="20,0,20,0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="48" />
+                <RowDefinition Height="5" />
+              </Grid.RowDefinitions>
+              <Image Grid.Row="1" HorizontalOptions="StartAndExpand"
+                     Source="{Binding Speaker.ImageUrl}"
+                     VerticalOptions="Start">
+                <Image.WidthRequest>
+                  <OnPlatform Android="50"
+                              WinPhone="100"
+                              iOS="50"
+                              x:TypeArguments="x:Double" />
+                </Image.WidthRequest>
+                <Image.HeightRequest>
+                  <OnPlatform Android="50"
+                              WinPhone="100"
+                              iOS="50"
+                              x:TypeArguments="x:Double" />
+                </Image.HeightRequest>
+              </Image>
+              <StackLayout Grid.Row="1"
+                           Grid.Column="1"
+                           HorizontalOptions="FillAndExpand"
+                           Padding="10,0,0,0">
+
+                <Label Font="Medium"
+                       FontAttributes="Bold"
+                       Text="{Binding Name}"
+                       TextColor="Black" />
+
+                <Label Font="Medium"
+                       LineBreakMode="TailTruncation"
+                       Text="{Binding Speaker.Name}"
+                       TextColor="Black" />
+                <Label Font="Small"
+                       LineBreakMode="TailTruncation"
+                       TextColor="Black" Text="{Binding Details}"/>
+              </StackLayout>
+
+                   ….
+
+      </DataTemplate>
+      </ResourceDictionary>
+     </Application.Resources>
+    </Application>
+
+Then, define the **x:key** value to identify the DataTemplate as following:
+
+     <Application.Resources>
+        <ResourceDictionary>
+          <DataTemplate x:Key="SessionTemplate">
+  
+
+  
+If you run the application you will get some errors because it is required to move the converters and the **SessionViewModel** to **App.xaml**, as following:
+
+      …
+
+     <Application.Resources>
+       <ResourceDictionary>
+         <viewModels:SessionViewModel x:Key="SessionViewModel"/>
+         <converters:FavoriteImageConverter x:Key="FavoriteImageConverter" />
+         <converters:ImageSizeConverter x:Key="ImageSizeConverter"/>
+         <converters:ImageUrlConverter x:Key="ImageUrlConverter"/>
+         <DataTemplate x:Key="SessionTemplate">
+            <ViewCell>
+
+     ….
+
+
+Now you can use the DataTemplate defined in Resources, using the key defined “SessionTemplate”, as following:
+
+
+       <!-- ListView will be defined here -->
+       <ListView x:Name="SessionsList"
+                   Grid.Row="1"
+                   RowHeight="{Binding Converter={StaticResource RowHeightConverter}}"
+                   ItemSelected="SessionsList_OnItemSelected"
+                   ItemsSource="{Binding Sessions}"
+                   SeparatorColor="#0094FF" ItemTemplate="{StaticResource SessionTemplate}">
+
+
+This way, the SessionsView.xaml looks cleaner, it is easier to understand the code and is possible to reuse the DataTemplate if needed.
+
+
 
 
 ## Wrapping Up
