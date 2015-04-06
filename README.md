@@ -1,9 +1,6 @@
 <MTMarkdownOptions output='html4'>
-	<a href="enei.pt"><img src="http://saramgsilva.github.io/XamarinWorkshop/images/1010ENEIHeader.png"/></a>
+	<a href=""><img src="http://s20.postimg.org/9g7rqt8t9/header.png"/></a>
 </MTMarkdownOptions>
-
-
-**Xamarin Workshop**
 
 
 ##  :white_medium_square: Table of contents
@@ -15,8 +12,6 @@
 	* [By platform](#by-platform)
 	* [By demo](#by-demo)
 * [Guides](#white_medium_square-guides)
-* [Slides](#white_medium_square-slides)
-* [Screenshots](#white_medium_square-screenshots)
 * [Contributors](#white_medium_square-contributors)
 * [Contributions](#white_medium_square-contributions)
 * [License](#white_medium_square-license)
@@ -25,13 +20,17 @@
 ##  :white_medium_square: Scope
 
 This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) which original content is avaible [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository to create a Xamarin Community Workshop as a white brand which the main goal is to any developer or user group costumize it to theirs events.
-
-:warning: At this moment it is a clone from the original and it will be redraw to remove all about the 1010 ENEI event.
  
 
 ##  :white_medium_square: Abstract
 
-In this [Xamarin Workshop](https://enei.pt/eventos/xamarin/), you will learn what's Xamarin and its products, how to create mobile cross-platform applications, using Xamarin for Android, iOS and Windows. You will learn the two most used patterns in this kind of applications and at the end you will create your own Sessions App.
+In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, which main goals are:
+
+- Create a Sessions App from the scratch using XAML;
+- Apply the Abstraction pattern;
+- Apply the MVVM pattern;
+- Integrate with Azure App Services;
+- Integrate with Azure Notification Hubs;
 
 
 ## :white_medium_square:  Requirements
@@ -118,28 +117,13 @@ In this [Xamarin Workshop](https://enei.pt/eventos/xamarin/), you will learn wha
 	    * [Windows Phone](Guides/5.%20Add%20ShareService.md#windows-phone)
 		* [Android](Guides/5.%20Add%20ShareService.md#android)
 		* [iOS](Guides/5.%20Add%20ShareService.md#ios)
-	6. [Add splah screen, name and version](Guides/6.%20Add%20splah%20screen%2C%20name%20and%20version.md)
+	6. Add splah screen, name and version
 	7. [Add support for WinRT Apps](Guides/7.%20Add%20support%20for%20WinRT%20Apps.md)
 * [Wrapping Up](Guides/8.%20Wrapping%20Up.md)
 	 
 * [Complete Guide: 1010 ENEI || Xamarin Workshop](Guides/1010ENEIGuide.md)  
 
 [![PDF Guide](Guides/ImagesForGuides/CoverGuides-small.png)](Guides/CompleteGuide-1010ENEI-Xamarin Workshop.pdf)
-
-## :white_medium_square:  Slides
-	
-The slides are available [here](http://www.slideshare.net/saramgsilva/xamarin-workshop-46414752).
-	 
-## :white_medium_square: Screenshots	
-
-* **Windows Phone 8.0, iOS and Android applications**
-
-![PDF Guide](Guides/ImagesForGuides/1010eneisessionsapp.jpg)
-
-
-* **WinRT applications**
-
-![PDF Guide](Guides/ImagesForGuides/figure50.png)
 
 
 ## :white_medium_square: Contributors
@@ -164,7 +148,8 @@ Thanks to **João Matos**, **Allan Pead**, **Craig Dunn** and **Aditya Gujaran**
 
 ## :white_medium_square: Contributions
 
-Any developer can contribute to this Xamarin Workshop with guides, demos or improvements.
+Any developer can contribute using **Draft Branch** or **Review Branch**, and then do a pull request. 
+To clarify any doubt please open an issue [here](https://github.com/XamCommunityWorkshop/SessionsApp/issues).
 
 
 ## :white_medium_square: License
