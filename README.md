@@ -19,7 +19,7 @@
 
 ##  :white_medium_square: Scope
 
-This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) which original content is available [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository, which the main goal is to any developer or user group This Xamarin Workshop was created for the The Portuguese National Meeting of IT Students (ENEI) by Sara Silva which original content is available here. With the goal to extend it to the global community, Sara Silva and Allan Pead are creating this repository to create a Xamarin Community Workshop as a white brand, which the main goal is to any developer, or user group customize it to theirs events.
+This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) which original content is available [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository to create a Xamarin Community Workshop to use in user groups events or by developers to learn Xamarin.
  
 
 ##  :white_medium_square: Abstract
@@ -90,7 +90,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 [5. Add ShareService](src/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [6. Add splash screen, name and version](src/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :x: |  :x: | :x: | 
 [7. Add support to WinRT apps](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-
+[8. Change the App.cs to App.xaml](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 
 ## :white_medium_square: Guides
 
