@@ -1,5 +1,3 @@
-# 1010 ENEI || SessionsApp
-
 <MTMarkdownOptions output='html4'>
 	<a href="https://github.com/XamCommunityWorkshop/SessionsApp"><img src="https://raw.githubusercontent.com/XamCommunityWorkshop/SessionsApp/Draft/Guides/ImagesForGuides/header.png"/></a>
 </MTMarkdownOptions>
@@ -35,8 +33,8 @@
 		* [iOS](#ios)
 	6. [Add splash screen, name and version](#6-add-splash-screen-name-and-version)
 	7. [Add support for WinRT Apps](#7-add-support-for-winrt-apps)
-	8. [Change the App.cs to App.xaml](#8-Change-the-App.cs-to-App.xaml)
-	9. [Use MVVM pattern](9-Use-MVVM-pattern)
+	8. [Change the App.cs to App.xaml](#8-change-the-appcs-to-appxaml)
+	9. [Use MVVM pattern](#9-use-mvvm-pattern)
 * [Wrapping Up](#wrapping-up)
 
 ## Scope
