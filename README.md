@@ -90,7 +90,8 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 [5. Add ShareService](src/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [6. Add splash screen, name and version](src/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :x: |  :x: | :x: | 
 [7. Add support to WinRT apps](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[8. Change the App.cs to App.xaml](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[8. Change the App.cs to App.xaml](src/8. Change the App.cs to App.xaml) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[9. Use MVVM pattern](src/9.%20Use%20MVVM%20pattern) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 
 ## :white_medium_square: Guides
 
@@ -120,6 +121,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 	6. Add splah screen, name and version
 	7. [Add support for WinRT Apps](Guides/7.%20Add%20support%20for%20WinRT%20Apps.md)
 	8. [Change the App.cs to App.xaml](8. Change the App.cs to App.xaml.md)
+	9. [Use MVVM pattern](9. Use MVVM pattern.md)
 * [Wrapping Up](Guides/Wrapping%20Up.md)
 	 
 * [Complete Guide: 1010 ENEI || Xamarin Workshop](Guides/1010ENEIGuide.md)  

@@ -7,6 +7,7 @@ namespace ENEI.SessionsApp
     {
         public App()
         {
+			InitializeComponent();
             MainPage = new NavigationPage(new SessionsView())
             {
                 BarBackgroundColor = Color.White,
