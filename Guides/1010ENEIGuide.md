@@ -1,11 +1,11 @@
-# 1010 ENEI || Xamarin Workshop
+# 1010 ENEI || SessionsApp
 
 <MTMarkdownOptions output='html4'>
-	<a href="enei.pt"><img src="http://saramgsilva.github.io/XamarinWorkshop/images/1010ENEIHeader.png"/></a>
+	<a href="https://github.com/XamCommunityWorkshop/SessionsApp"><img src="https://raw.githubusercontent.com/XamCommunityWorkshop/SessionsApp/Draft/Guides/ImagesForGuides/header.png"/></a>
 </MTMarkdownOptions>
 
-[![Join the chat at https://gitter.im/saramgsilva/XamarinWorkshop](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/saramgsilva/XamarinWorkshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-**Xamarin Workshop**
+**Table of Contents**
+
 
 * [1010 ENEI || Xamarin Workshop](#1010-enei--xamarin-workshop) [![PDF Guide](ImagesForGuides/PDF-icon.png)](CompleteGuide-1010ENEI-Xamarin Workshop.pdf)
 * [Scope](#scope)
@@ -1601,6 +1601,41 @@ At this moment if you run the applications you will have something as following:
 **Figure 50: The WinRT apps**
 
 
+
+### 8. Change the App.cs to App.xaml
+
+
+In this step you will learn how to change the **App.cs** to have the **App.xaml** file, which will define the Xamarin Forms application.In the **ENEI.SessionsApp** project is possible to find the App.cs file which define the application. It is a simple class defined in a *.cs file, which can be defined using a XAML approach. For it you need to create a new XAML page as described in figure 51 and figure 52:
+
+
+![**Figure 51:** Add new item (using Visual Studio)](ImagesForGuides/figure51.png)
+**Figure 51: Add new item (using Visual Studio)**
+
+![**Figure 52:** Add new Forms Xaml Page called App (using Visual Studio)](ImagesForGuides/figure52.png)
+**Figure 52: Add new Forms Xaml Page called App (using Visual Studio)**
+
+The result will be something as following:
+**App.xaml**
+
+	    <?xml version="1.0" encoding="utf-8" ?>        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             x:Class="ENEI.SessionsApp.App">	       <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />       </ContentPage>
+
+**App.xaml.cs**
+
+
+     public partial class App : ContentPage     {        public App()        {            InitializeComponent();        }     }
+
+
+At this moment, it is a content page that is not our goal, but it is the workaround to create the App.xaml and App.xaml.cs files. Now to create the Xamarin Forms application based in the XAML approach we need to change the code above, as following:
+
+**App.xaml**
+
+ 
+      <?xml version="1.0" encoding="utf-8" ?>      <Application xmlns="http://xamarin.com/schemas/2014/forms"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             x:Class="ENEI.SessionsApp.App">      </Application>	 **App.xaml.cs**
+    public partial class App : Application    {        public App()        {            InitializeComponent();        }    } With it, you will have to App class that inherits from Xamarin.Forms.Application, to avoid it, you should delete the App.cs file, but before we need to move the code from the App.cs to App.xaml.cs, which result will be something as following:     public class App : Application    {        public App()        {            // The root page of your application            MainPage = new NavigationPage(new SessionsView())            {                  BarBackgroundColor = Color.White,                BarTextColor = Color.Black,                BackgroundColor = Color.White,            };        }        protected override void OnStart()        {            // Handle when your app starts        }        protected override void OnSleep()        {            // Handle when your app sleeps        }        protected override void OnResume()        {            // Handle when your app resumes        }    }If you run the application it must behave as before.
+
+
+
+
 ## Wrapping Up
 
 Xamarin Forms allow us to quickly create native applications for the different platforms with the same code base. This way, it will reduce the maintenance time and increases the time to improve the application.
@@ -1608,16 +1643,16 @@ Xamarin Forms allow us to quickly create native applications for the different p
 
 ![Xamarin Workshop - 1010 ENEI Sessions App](ImagesForGuides/Android.jpg)
 
-**Figure 51: The Android application**
+**Figure X: The Android application**
 
 ![Xamarin Workshop - 1010 ENEI Sessions App](ImagesForGuides/iOS.jpg)
 
-**Figure 52: The iOS application**
+**Figure Y: The iOS application**
 
 ![Xamarin Workshop - 1010 ENEI Sessions App](ImagesForGuides/WindowsPhone.png)
 
-**Figure 53: The Windows Phone application**
+**Figure Z: The Windows Phone application**
 
 ![Xamarin Workshop - 1010 ENEI Sessions App](ImagesForGuides/1010eneisessionsapp.jpg)
 
-**Figure 54: The 1010 ENEI Sessions App**
+**Figure T: The 1010 ENEI Sessions App**

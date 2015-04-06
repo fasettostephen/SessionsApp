@@ -19,7 +19,7 @@
 
 ##  :white_medium_square: Scope
 
-This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) which original content is avaible [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository to create a Xamarin Community Workshop as a white brand which the main goal is to any developer or user group costumize it to theirs events.
+This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) which original content is available [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository, which the main goal is to any developer or user group This Xamarin Workshop was created for the The Portuguese National Meeting of IT Students (ENEI) by Sara Silva which original content is available here. With the goal to extend it to the global community, Sara Silva and Allan Pead are creating this repository to create a Xamarin Community Workshop as a white brand, which the main goal is to any developer, or user group customize it to theirs events.
  
 
 ##  :white_medium_square: Abstract
@@ -83,13 +83,13 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 
   **Demo** |  **Demo** |  **Online Guide**   | **PDF Guide**   | **Word Guide**   |
 :---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ | 
-[1. Create a Xamarin Forms project](1010ENEI/1.%20Create%20a%20Xamarin%20Forms%20project) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[2. Create the model and data source](1010ENEI/2.%20Create%20the%20model%20and%20data%20source) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[3. Create the SessionsView](1010ENEI/3.%20Create%20the%20SessionsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[4. Create the SessionDetailsView](1010ENEI/4.%20Create%20the%20SessionDetailsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[5. Add ShareService](1010ENEI/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[6. Add splash screen, name and version](010ENEI/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :x: |  :x: | :x: | 
-[7. Add support to WinRT apps](1010ENEI/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[1. Create a Xamarin Forms project](src/1.%20Create%20a%20Xamarin%20Forms%20project) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[2. Create the model and data source](src/2.%20Create%20the%20model%20and%20data%20source) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[3. Create the SessionsView](src/3.%20Create%20the%20SessionsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[4. Create the SessionDetailsView](src/4.%20Create%20the%20SessionDetailsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[5. Add ShareService](src/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[6. Add splash screen, name and version](src/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :x: |  :x: | :x: | 
+[7. Add support to WinRT apps](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 
 
 ## :white_medium_square: Guides
@@ -119,7 +119,8 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 		* [iOS](Guides/5.%20Add%20ShareService.md#ios)
 	6. Add splah screen, name and version
 	7. [Add support for WinRT Apps](Guides/7.%20Add%20support%20for%20WinRT%20Apps.md)
-* [Wrapping Up](Guides/8.%20Wrapping%20Up.md)
+	8. [Change the App.cs to App.xaml](8. Change the App.cs to App.xaml.md)
+* [Wrapping Up](Guides/Wrapping%20Up.md)
 	 
 * [Complete Guide: 1010 ENEI || Xamarin Workshop](Guides/1010ENEIGuide.md)  
 
