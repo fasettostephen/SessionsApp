@@ -126,6 +126,9 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 	9. [Use MVVM pattern](Guides/9.%20Use%20MVVM%20pattern.md)
 	10. [Move ItemTemplate to Resources](Guides/10.%20Move%20ItemTemplate%20to%20Resources.md)
 	11. [Create a LoginView](Guides/11.%20Create%20a%20LoginView.md)
+	    * [Creating the UI using Font Awesome](Guides/11.%20Create%20a%20LoginView.md#creating-the-ui-using-font-awesome)
+		* [Create the LoginViewModel](Guides/11.%20Create%20a%20LoginView.md#create-the-loginviewmodel)
+		* [Handle Navigation](Guides/11.%20Create%20a%20LoginView.md#handle-navigation)
 * [Wrapping Up](Guides/Wrapping%20Up.md)
 	 
 * [Complete Guide: 1010 ENEI || Xamarin Workshop](Guides/1010ENEIGuide.md)  
