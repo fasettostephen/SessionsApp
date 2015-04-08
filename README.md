@@ -87,7 +87,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 [3. Create the SessionsView](src/3.%20Create%20the%20SessionsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [4. Create the SessionDetailsView](src/4.%20Create%20the%20SessionDetailsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [5. Add ShareService](src/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[6. Add splash screen, name and version](src/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :x: |  :x: | :x: | 
+[6. Add splash screen, name and version](src/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | 
 [7. Add support to WinRT apps](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [8. Change the App.cs to App.xaml](src/8. Change the App.cs to App.xaml) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [9. Use MVVM pattern](src/9.%20Use%20MVVM%20Pattern) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
@@ -120,7 +120,9 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 	    * [Windows Phone](Guides/5.%20Add%20ShareService.md#windows-phone)
 		* [Android](Guides/5.%20Add%20ShareService.md#android)
 		* [iOS](Guides/5.%20Add%20ShareService.md#ios)
-	6. Add splah screen, name and version
+	6. [Add splah screen, name and version](Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md)
+		* [Define the splash screen](Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md#define-the-splash-screen)
+		* [Define the name and the version for each platform](Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md#define-the-name-and-the-version-for-each-platform)
 	7. [Add support for WinRT Apps](Guides/7.%20Add%20support%20for%20WinRT%20Apps.md)
 	8. [Change the App.cs to App.xaml](Guides/8.%20Change%20the%20App.cs%20to%20App.xaml%20copy.md)
 	9. [Use MVVM pattern](Guides/9.%20Use%20MVVM%20pattern.md)
