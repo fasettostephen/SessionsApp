@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ENEI.SessionsApp.Controls;assembly=ENEI.SessionsApp"
+             x:Class="ENEI.SessionsApp.Views.LoginView"
+             Title="Authentication"
+             BackgroundColor="White"
+             x:Name="ContentPage"
+             Icon="ic_action_users.png">
+  <Grid BackgroundColor="White">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <!-- Title - Only for WP-->
+    <StackLayout Grid.Row="0" Orientation="Horizontal" Padding="20,10,0,0">
+      <StackLayout.IsVisible>
+        <OnPlatform Android="false"
+                    WinPhone="true"
+                    iOS="false"
+                    x:TypeArguments="x:Boolean" />
+      </StackLayout.IsVisible>
+      <Image WidthRequest="48"
+             HeightRequest="38"
+             Source="Images/ic_action_users.png"/>
+      <Label FontSize="Medium" FontAttributes="Bold"
+           TextColor="Black">
+
+        <OnPlatform Android=""
+                    WinPhone="Authentication"
+                    iOS=""
+                    x:TypeArguments="x:String" />
+      </Label>
+    </StackLayout>
+    <StackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="1">
+      <StackLayout WidthRequest="300" HeightRequest="60" Orientation="Horizontal" BackgroundColor="#3b5998" HorizontalOptions="Center" Spacing="20">
+         <StackLayout.GestureRecognizers>
+              <TapGestureRecognizer CommandParameter="facebook"
+                                    Command="{Binding LoginCommand}"/>
+          </StackLayout.GestureRecognizers>
+        <controls:CustomLabel FontSize="Small"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="&#xf09a;"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+        <Label FontAttributes="Bold"
+                FontSize="Small"
+                HorizontalOptions="StartAndExpand"
+                Text="Facebook"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+      </StackLayout>
+      <StackLayout WidthRequest="300" HeightRequest="60"  Orientation="Horizontal" BackgroundColor="#dd4b39" HorizontalOptions="Center" Spacing="20">
+           <StackLayout.GestureRecognizers>
+              <TapGestureRecognizer CommandParameter="google"
+                                    Command="{Binding LoginCommand}"/>
+          </StackLayout.GestureRecognizers>
+          <controls:CustomLabel FontSize="Small"
+                              HorizontalOptions="CenterAndExpand"
+                              Text="&#xf0d4;"
+                              TextColor="White"
+                              VerticalOptions="CenterAndExpand" />
+          <Label FontAttributes="Bold"
+                FontSize="Small"
+                HorizontalOptions="StartAndExpand"
+                Text="Google"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+      </StackLayout>
+      <StackLayout WidthRequest="300" HeightRequest="60"  Orientation="Horizontal" BackgroundColor="#219dfd" HorizontalOptions="Center" Spacing="20">
+        <StackLayout.GestureRecognizers>
+              <TapGestureRecognizer CommandParameter="microsoft"
+                                    Command="{Binding LoginCommand}"/>
+        </StackLayout.GestureRecognizers>
+        <controls:CustomLabel FontSize="Small"
+                           HorizontalOptions="CenterAndExpand"
+                           Text="&#xf17a;"
+                           TextColor="White"
+                           VerticalOptions="CenterAndExpand" />
+        <Label FontAttributes="Bold"
+               FontSize="Small"
+               HorizontalOptions="StartAndExpand"
+               Text="Microsoft"
+               TextColor="White"
+               VerticalOptions="CenterAndExpand" />
+      </StackLayout>
+    </StackLayout>
+  </Grid>
+</ContentPage>
