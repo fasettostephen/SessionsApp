@@ -37,7 +37,7 @@
 	8. [Change the App.cs to App.xaml](#8-change-the-appcs-to-appxaml)
 	9. [Use MVVM pattern](#9-use-mvvm-pattern)
     10. [Move ItemTemplate to Resources](#10-move-itemtemplate-to-resources)
-	11. [Create a LoginView using Font Awesome](#11-Create-a-LoginView-using-Font-Awesome)
+	11. [Create a LoginView](#11-create-a-loginview)
 		* [Creating the UI using Font Awesome](#creating-the-ui-using-font-awesome)
 		* [Create the LoginViewModel](#create-the-loginviewmodel)
 		* [Handle Navigation](#handle-navigation)
