@@ -37,6 +37,7 @@
 	8. [Change the App.cs to App.xaml](#8-change-the-appcs-to-appxaml)
 	9. [Use MVVM pattern](#9-use-mvvm-pattern)
     10. [Move ItemTemplate to Resources](#10-move-itemtemplate-to-resources)
+	11. [Create a LoginView using Font Awesome](#11-Create-a-LoginView-using-Font-Awesome)
 * [Wrapping Up](#wrapping-up)
 
 ## Scope
@@ -52,6 +53,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 - Apply the Abstraction pattern;
 - Apply the MVVM pattern;
 - Use resources and converters
+- Use Font Awesome
 
 
 ## Requirements
@@ -1834,7 +1836,7 @@ Now you can use the DataTemplate defined in Resources, using the key defined “
 
 This way, the SessionsView.xaml looks cleaner, it is easier to understand the code and is possible to reuse the DataTemplate if needed.
 
-
+### 11. Create a LoginView using Font Awesome
 
 
 ## Wrapping Up
