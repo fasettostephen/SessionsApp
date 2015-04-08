@@ -1836,7 +1836,9 @@ Now you can use the DataTemplate defined in Resources, using the key defined “
 
 This way, the SessionsView.xaml looks cleaner, it is easier to understand the code and is possible to reuse the DataTemplate if needed.
 
-### 11. Create a LoginView using Font Awesome
+### 11. Create a LoginView 
+
+
 
 
 ## Wrapping Up

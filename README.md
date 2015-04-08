@@ -92,7 +92,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 [8. Change the App.cs to App.xaml](src/8. Change the App.cs to App.xaml) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [9. Use MVVM pattern](src/9.%20Use%20MVVM%20Pattern) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [10. Move ItemTemplate to Resources](src/10.%20Move%20ItemTemplate%20to%20Resources) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
-[11. Create a LoginView using Font Awesome](src/11.%20Create%20a%20LoginView%20using%20Font%20Awesome) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
+[11. Create a LoginView](src/11.%20Create%20a%20LoginView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
 
 
 ## :white_medium_square: Guides
@@ -125,7 +125,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 	8. [Change the App.cs to App.xaml](Guides/8.%20Change%20the%20App.cs%20to%20App.xaml%20copy.md)
 	9. [Use MVVM pattern](Guides/9.%20Use%20MVVM%20pattern.md)
 	10. [Move ItemTemplate to Resources](Guides/10.%20Move%20ItemTemplate%20to%20Resources.md)
-	11. [Create a LoginView using Font Awesome](Guides/11.%20Create%20a%20LoginView%20using%20Font%20Awesome.md)
+	11. [Create a LoginView](Guides/11.%20Create%20a%20LoginView.md)
 * [Wrapping Up](Guides/Wrapping%20Up.md)
 	 
 * [Complete Guide: 1010 ENEI || Xamarin Workshop](Guides/1010ENEIGuide.md)  
