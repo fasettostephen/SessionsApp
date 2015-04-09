@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sessionsapp by XamCommunityWorkshop</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Sessionsapp</h1>
+        <p class="header">This a Xamarin Forms sample based in ENEI.SessionsApp from the 1010 ENEI event, which initial version is available at http://saramgsilva.github.io/XamarinWorkshop/</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/XamCommunityWorkshop/SessionsApp/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/XamCommunityWorkshop/SessionsApp/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/XamCommunityWorkshop/SessionsApp">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/XamCommunityWorkshop">XamCommunityWorkshop</a></p>
+
+
+      </header>
+      <section>
+        <p>
+    <a href=""><img src="http://s20.postimg.org/9g7rqt8t9/header.png"></a>
+</p>
+
+<h2>
+<a id="white_medium_square-table-of-contents" class="anchor" href="#white_medium_square-table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Table of contents</h2>
+
+<ul>
+<li><a href="#white_medium_square-scope">Scope</a></li>
+<li><a href="#white_medium_square-abstract">Abstract</a></li>
+<li><a href="#white_medium_square--requirements">Requirements</a></li>
+<li><a href="#white_medium_square--resources">Resources</a></li>
+<li>
+<a href="#white_medium_square-samples-status">Sample Status</a>
+
+<ul>
+<li><a href="#by-platform">By platform</a></li>
+<li><a href="#by-demo">By demo</a></li>
+</ul>
+</li>
+<li><a href="#white_medium_square-guides">Guides</a></li>
+<li><a href="#white_medium_square-contributors">Contributors</a></li>
+<li><a href="#white_medium_square-contributions">Contributions</a></li>
+<li><a href="#white_medium_square-license">License</a></li>
+</ul>
+
+<h2>
+<a id="white_medium_square-scope" class="anchor" href="#white_medium_square-scope" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Scope</h2>
+
+<p>This <strong>Xamarin Workshop</strong> was created for the <a href="http://enei.pt/"><strong>The Portuguese National Meeting of IT Students (ENEI)</strong></a> by <a href="https://twitter.com/saramgsilva">Sara Silva</a> which original content is available <a href="https://github.com/saramgsilva/XamarinWorkshop">here</a>. With the goal to extend it to the global community, <a href="https://twitter.com/saramgsilva">Sara Silva</a> and <a href="https://twitter.com/adpead">Allan Pead</a> are creating this repository to create a Xamarin Community Workshop to use in user groups events or by developers to learn Xamarin.</p>
+
+<h2>
+<a id="white_medium_square-abstract" class="anchor" href="#white_medium_square-abstract" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Abstract</h2>
+
+<p>In this <strong>Xamarin Workshop</strong>, you will learn how to create a Xamarin Forms app, which main goals are:</p>
+
+<ul>
+<li>Create a Sessions App from the scratch using XAML;</li>
+<li>Apply the Abstraction pattern;</li>
+<li>Apply the MVVM pattern;</li>
+<li>Use resources and converters</li>
+<li>Use Font Awesome</li>
+</ul>
+
+<h2>
+<a id="white_medium_square--requirements" class="anchor" href="#white_medium_square--requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle">  Requirements</h2>
+
+<p><strong>Each developer should:</strong></p>
+
+<ul>
+<li>Have a Windows or a Mac device;</li>
+<li>Install <a href="http://xamarin.com/download">Xamarin Studio</a>;</li>
+<li>Install <a href="http://developer.xamarin.com/guides/ios/getting_started/installation/">Xamarin IOS</a> and/or <a href="http://developer.xamarin.com/guides/android/getting_started/installation/">Xamarin Android</a>
+</li>
+<li>Install <a href="https://xamarin.com/android-player">Xamarin Android Player</a> or <a href="https://www.genymotion.com/#!/">Genymotion</a>
+</li>
+<li>Install <a href="https://www.visualstudio.com/en-us/news/vs2013-community-vs.aspx">Visual Studio Community 2013</a>
+</li>
+<li>Install <a href="https://dev.windows.com/en-us/develop/downloads">Windows Phone 8.1 SDK and Windows SDK for Windows 8.1</a>
+</li>
+</ul>
+
+<p><strong>Notes:</strong>  </p>
+
+<ol>
+<li>If you have a Windows device you can create Windows and Android applications. To create iOS applications is always required a Mac, and in this case you can create iOS and Android application using Xamarin Studio. With a Mac and Windows running in Parallels or VMware is possible to create the three targets at the same time (but is required a Windows Phone device to do the deploy!).</li>
+<li>Xamarin Plugin for Visual Studio in only available for Business plan and for developers that participate in Open Source projects.</li>
+<li>Each student should get your own Xamarin Student License for free in <a href="https://xamarin.com/student">xamarin.com/student</a>.</li>
+</ol>
+
+<h2>
+<a id="white_medium_square--resources" class="anchor" href="#white_medium_square--resources" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle">  Resources</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Xamarin IOS</strong></th>
+<th align="left"><strong>Xamarin Android</strong></th>
+<th align="left"><strong>Xamarin Forms</strong></th>
+<th align="left"><strong>Others</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="http://developer.xamarin.com/guides/ios/getting_started/">Getting started</a></td>
+<td align="left"><a href="http://developer.xamarin.com/guides/android/getting_started/">Getting started</a></td>
+<td align="left"><a href="http://developer.xamarin.com/guides/cross-platform/xamarin-forms/">Getting started</a></td>
+<td align="left"><a href="http://developer.xamarin.com/recipes/">Xamarin Recipes</a></td>
+</tr>
+<tr>
+<td align="left"><a href="http://iosapi.xamarin.com/">API</a></td>
+<td align="left"><a href="http://androidapi.xamarin.com/"> API</a></td>
+<td align="left"><a href="http://api.xamarin.com/?link=N%3aXamarin.Forms">API</a></td>
+<td align="left"><a href="http://developer.xamarin.com/videos/">Xamarin Videos</a></td>
+</tr>
+<tr>
+<td align="left"><a href="http://developer.xamarin.com/guides/ios/">Guides</a></td>
+<td align="left"><a href="http://developer.xamarin.com/guides/android/">Guides</a></td>
+<td align="left"><a href="https://github.com/xamarin/xamarin-forms-samples">Samples</a></td>
+<td align="left"><a href="http://developer.xamarin.com/samples-all/">Xamarin Samples</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20" align="absmiddle"> Ebook</p>
+
+<p>
+    <a href="http://developer.xamarin.com/guides/cross-platform/xamarin-forms/creating-mobile-apps-xamarin-forms/"><img src="http://developer.xamarin.com/guides/cross-platform/xamarin-forms/creating-mobile-apps-xamarin-forms/Images/Cover-Preview-sml.png"></a>
+</p>
+
+<h2>
+<a id="white_medium_square-samples-status" class="anchor" href="#white_medium_square-samples-status" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Samples Status</h2>
+
+<h3>
+<a id="by-platform" class="anchor" href="#by-platform" aria-hidden="true"><span class="octicon octicon-link"></span></a>By platform</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>iOS</strong></th>
+<th align="left"><strong>Android</strong></th>
+<th align="left"><strong>WP8.0</strong></th>
+<th align="left"><strong>Win8.1 Store App</strong></th>
+<th align="left"><strong>WPA8.1</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left">
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> ( * )</td>
+<td align="left">
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> ( * )</td>
+</tr>
+</tbody>
+</table>
+
+<p>(*) This sample is in a preview version and is only available in <a href="1010ENEI/7.%20Add%20support%20to%20WinRT%20apps">Step 7: Add support to WinRT apps</a>.</p>
+
+<h3>
+<a id="by-demo" class="anchor" href="#by-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>By demo</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Demo</strong></th>
+<th align="left"><strong>Demo</strong></th>
+<th align="left"><strong>Online Guide</strong></th>
+<th align="left"><strong>PDF Guide</strong></th>
+<th align="left"><strong>Word Guide</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="src/1.%20Create%20a%20Xamarin%20Forms%20project">1. Create a Xamarin Forms project</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/2.%20Create%20the%20model%20and%20data%20source">2. Create the model and data source</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/3.%20Create%20the%20SessionsView">3. Create the SessionsView</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/4.%20Create%20the%20SessionDetailsView">4. Create the SessionDetailsView</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/5.%20Add%20ShareService">5. Add ShareService</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/6.%20Add%20splash%20screen%2C%20name%20and%20version">6. Add splash screen, name and version</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/7.%20Add%20support%20to%20WinRT%20apps">7. Add support to WinRT apps</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/8.%20Change%20the%20App.cs%20to%20App.xaml">8. Change the App.cs to App.xaml</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/9.%20Use%20MVVM%20Pattern">9. Use MVVM pattern</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/10.%20Move%20ItemTemplate%20to%20Resources">10. Move ItemTemplate to Resources</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left"><a href="src/11.%20Create%20a%20LoginView">11. Create a LoginView</a></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="white_medium_square-guides" class="anchor" href="#white_medium_square-guides" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Guides</h2>
+
+<ul>
+<li>
+<a href="Guides">Guides by steps</a>
+
+<ol>
+<li>
+<a href="Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md">Create a Xamarin Forms project</a>
+
+<ul>
+<li><a href="Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#using-xamarin-studio-in-mac">Using Xamarin Studio in Mac</a></li>
+<li><a href="Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#using-xamarin-studio-in-windows">Using Xamarin Studio in Windows</a></li>
+<li><a href="Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#using-visual-studio-in-windows">Using Visual Studio in Windows</a></li>
+<li><a href="Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#running-the-application">Running the application</a></li>
+<li><a href="Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#additional-notes---xamarin-forms-initialization">Additional notes - Xamarin Forms initialization </a></li>
+</ul>
+</li>
+<li><a href="Guides/2.%20Create%20the%20model%20and%20the%20data%20source.md">Create the model and data source</a></li>
+<li>
+<a href="Guides/3.%20Create%20the%20SessionsView.md">Create the SessionsView</a>
+
+<ul>
+<li><a href="Guides/3.%20Create%20the%20SessionsView.md#create-the-xaml-page">Create the Xaml page</a></li>
+<li>
+<a href="Guides/3.%20Create%20the%20SessionsView.md#create-the-header">Create the Header</a>
+*<a href="Guides/3.%20Create%20the%20SessionsView.md#defining-the-images-for-each-platform">Defining the Images for each platform</a>
+</li>
+<li><a href="Guides/3.%20Create%20the%20SessionsView.md#create-the-listview">Create the Listview</a></li>
+<li><a href="Guides/3.%20Create%20the%20SessionsView.md#create-the-itemtemplate">Create the ItemTemplate</a></li>
+<li>
+<a href="Guides/3.%20Create%20the%20SessionsView.md#create-the-menu-for-each-session">Create the menu for each Session</a>
+
+<ul>
+<li><a href="Guides/3.%20Create%20the%20SessionsView.md#running-the-application-1">Running the application</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="Guides/4.%20Create%20the%20SessionDetailsView.md">Create the SessionDetailsView</a>
+
+<ul>
+<li><a href="Guides/4.%20Create%20the%20SessionDetailsView.md#the-details-gesture">Details Gesture</a></li>
+<li><a href="Guides/4.%20Create%20the%20SessionDetailsView.md#running-the-application-2">Running the application</a></li>
+</ul>
+</li>
+<li>
+<a href="Guides/5.%20Add%20ShareService.md">Add ShareService</a>
+
+<ul>
+<li><a href="Guides/5.%20Add%20ShareService.md#windows-phone">Windows Phone</a></li>
+<li><a href="Guides/5.%20Add%20ShareService.md#android">Android</a></li>
+<li><a href="Guides/5.%20Add%20ShareService.md#ios">iOS</a></li>
+</ul>
+</li>
+<li>
+<a href="Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md">Add splah screen, name and version</a>
+
+<ul>
+<li><a href="Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md#define-the-splash-screen">Define the splash screen</a></li>
+<li><a href="Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md#define-the-name-and-the-version-for-each-platform">Define the name and the version for each platform</a></li>
+</ul>
+</li>
+<li><a href="Guides/7.%20Add%20support%20for%20WinRT%20Apps.md">Add support for WinRT Apps</a></li>
+<li><a href="Guides/8.%20Change%20the%20App.cs%20to%20App.xaml%20copy.md">Change the App.cs to App.xaml</a></li>
+<li><a href="Guides/9.%20Use%20MVVM%20pattern.md">Use MVVM pattern</a></li>
+<li><a href="Guides/10.%20Move%20ItemTemplate%20to%20Resources.md">Move ItemTemplate to Resources</a></li>
+<li>
+<a href="Guides/11.%20Create%20a%20LoginView.md">Create a LoginView</a>
+
+<ul>
+<li><a href="Guides/11.%20Create%20a%20LoginView.md#creating-the-ui-using-font-awesome">Creating the UI using Font Awesome</a></li>
+<li><a href="Guides/11.%20Create%20a%20LoginView.md#create-the-loginviewmodel">Create the LoginViewModel</a></li>
+<li><a href="Guides/11.%20Create%20a%20LoginView.md#handle-navigation">Handle Navigation</a></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><a href="Guides/Wrapping%20Up.md">Wrapping Up</a></p></li>
+<li><p><a href="Guides/1010ENEIGuide.md">Complete Guide: 1010 ENEI || Xamarin Workshop</a>  </p></li>
+</ul>
+
+<p><a href="Guides/CompleteGuide-1010ENEI-Xamarin%20Workshop.pdf"><img src="Guides/ImagesForGuides/CoverGuides-small.png" alt="PDF Guide"></a></p>
+
+<h2>
+<a id="white_medium_square-contributors" class="anchor" href="#white_medium_square-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Contributors</h2>
+
+<p>
+    <a href="https://twitter.com/saramgsilva"><img src="http://saramgsilva.github.io/NotificationHubs/images/Eu_400x400.png" height="50"></a>
+
+    <a href="https://twitter.com/tritonpt"><img src="https://avatars3.githubusercontent.com/u/602268?v=3&amp;s=460" height="50"></a>
+
+
+    <a href="https://twitter.com/adpead"><img src="http://s20.postimg.org/407wb8del/image.jpg" height="50"></a>
+
+
+    <a href="https://twitter.com/conceptdev"><img src="http://s20.postimg.org/fdufmfnx9/image.jpg" height="50"></a>
+
+
+    <a href="https://twitter.com/agujaran"><img src="http://s20.postimg.org/fda7xyyn1/Gj_SBH2_HR_400x400.jpg" height="50"></a>
+</p>
+
+<p>Thanks to <strong>João Matos</strong>, <strong>Allan Pead</strong>, <strong>Craig Dunn</strong> and <strong>Aditya Gujaran</strong> for the support and the feedback provided!</p>
+
+<h2>
+<a id="white_medium_square-contributions" class="anchor" href="#white_medium_square-contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Contributions</h2>
+
+<p>Any developer can contribute using <strong>Draft Branch</strong> or <strong>Review Branch</strong>, and then do a pull request. 
+To clarify any doubt please open an issue <a href="https://github.com/XamCommunityWorkshop/SessionsApp/issues">here</a>.</p>
+
+<h2>
+<a id="white_medium_square-license" class="anchor" href="#white_medium_square-license" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> License</h2>
+
+<p>MIT License (MIT), read more about it in the <a href="https://raw.githubusercontent.com/saramgsilva/AMSToolkit/master/LICENSE.txt">LICENSE file</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-61722484-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
