@@ -10,7 +10,7 @@
 * [Abstract](#abstract)
 * [Requirements](#requirements)
 * [Guides](#guides)
-	1. [Create a Xamarin Forms project](#1--create-a-xamarin-forms-project)
+	1. [Creating a Xamarin Forms project](#1--creating-a-xamarin-forms-project)
 	    * [Using Xamarin Studio in Mac](#using-xamarin-studio-in-mac)
 		* [Using Xamarin Studio in Windows](#using-xamarin-studio-in-windows)
 		* [Using Visual Studio in Windows](#using-visual-studio-in-windows)
@@ -46,18 +46,18 @@
 
 ## Scope
 
-This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) which original content is available [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository to create a Xamarin Community Workshop to use in user groups events or by developers to learn Xamarin.
+This **Xamarin Workshop** was created for the [**The Portuguese National Meeting of IT Students (ENEI)**](http://enei.pt/) by [Sara Silva](https://twitter.com/saramgsilva) in which its original content is available [here](https://github.com/saramgsilva/XamarinWorkshop). With the goal to extend it to the global community, [Sara Silva](https://twitter.com/saramgsilva) and [Allan Pead](https://twitter.com/adpead) are creating this repository to create a Xamarin Community Workshop to use in user groups events or by developers to learn Xamarin.
 
 
 ## Abstract
 
-In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, which main goals are:
+In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, in which the main goals are:
 
-- Create a Sessions App from the scratch using XAML;
-- Apply the Abstraction pattern;
-- Apply the MVVM pattern;
-- Use resources and converters
-- Use Font Awesome
+- To create a Sessions App from the scratch using XAML;
+- To apply the Abstraction pattern;
+- To apply the MVVM pattern;
+- To use resources and converters
+- To use Font Awesome
 
 
 ## Requirements
@@ -72,17 +72,17 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 
 **Notes:**  
 
-1. If you have a Windows device you can create Windows and Android applications. To create iOS applications is always required a Mac, and in this case you can create iOS and Android application using Xamarin Studio. With a Mac and Windows running in Parallels or VMware is possible to create the three targets at the same time (but is required a Windows Phone device to do the deploy!).
-2. Xamarin Plugin for Visual Studio in only available for Business plan and for developers that participate in Open Source projects.
-3. Each student should get your own Xamarin Student License for free in [xamarin.com/student](https://xamarin.com/student).
+1. If you have a Windows device you can create Windows and Android applications. To create iOS applications a Mac is always required, and in this case you can create iOS and Android application using Xamarin Studio. With a Mac and Windows running in Parallels or VMware it is possible to create the three targets at the same time (but a Windows Phone device is required for the deployment!).
+2. Xamarin Plugin for Visual Studio is only available on Business plan and for developers that participate in Open Source projects.
+3. Each student may acquire their own Xamarin Student License for free in [xamarin.com/student](https://xamarin.com/student).
 
  
 ## Guides
 
 
-### 1.	Create a Xamarin Forms project 
+### 1.	Creating a Xamarin Forms project 
 
-The application you will create is a Xamarin Forms application, based in Portable Class Library project. 
+The application that will be created is a Xamarin Forms application, based on Portable Class Library project. 
 
 
 #### Using Xamarin Studio in Mac
@@ -103,7 +103,7 @@ Then create a new Blank App (Xamarin Forms Portable), as following:
 **Figure 2: Creating a Blank App (Xamarin Forms Portable)**
 
 
-Which result will be something as described in Figure 3:
+In which the result will be something as described in Figure 3:
 
 
 ![Xamarin Workshop - Figure 3](ImagesForGuides/figure3.png)
@@ -115,9 +115,9 @@ Which result will be something as described in Figure 3:
 The ENEI.SessionApp solution is defined by three projects:
 
 
-* **ENEI.SessionsApp:** portable class library project, which will contain the shared code between targets. This project is independent of the platform;
-* **ENEI.SessionsApp.Droid:** Xamarin Android project, which define the Android application and knows the Android API;
-* **ENEI.SessionsApp.iOS:** Xamarin iOS project, which define the iOS application and knows the iOS API;
+* **ENEI.SessionsApp:** portable class library project, which will contain the shared code between targets. This project is regardless of the platform;
+* **ENEI.SessionsApp.Droid:** Xamarin Android project, which defines the Android application and knows the Android API;
+* **ENEI.SessionsApp.iOS:** Xamarin iOS project, which defines the iOS application and knows the iOS API;
 
 Now, you should update the [NuGet Packages](https://www.nuget.org/) available in project. In the case described in figure 4, you only need to update the [Xamarin Forms NuGet Package](https://www.nuget.org/packages/Xamarin.Forms):
 
@@ -143,7 +143,7 @@ The result will be
 **Figure 6: iOS project updated**
 
 You need to do the same in the others projects, if needed.
-Before run the application, you should select the solution and define the configurations, as following:
+Before running the application, you should select the solution and define the configurations, as following:
 
 ![Xamarin Workshop - Figure 7](ImagesForGuides/figure7.png)
 
@@ -180,8 +180,8 @@ The result will be something as described in figure 10:
 
 The ENEI.SessionApp solution is defined by two projects:
 
-* **ENEI.SessionsApp:** portable class library project, which will contain the shared code between targets. This project is independent of the platform;
-* **ENEI.SessionsApp.Droid:** Xamarin Android project, which define the Android application and knows the Android API;
+* **ENEI.SessionsApp:** portable class library project, which will contain the shared code between targets. This projects is regardless of the platform;
+* **ENEI.SessionsApp.Droid:** Xamarin Android project, which defines the Android application and recognize the Android API;
 
 Now, you should update the [NuGet Packages](https://www.nuget.org/) available in the project. In the case described in figure 11, you only need to update the [Xamarin Forms NuGet Package](https://www.nuget.org/packages/Xamarin.Forms) and the [Xamarin.Android.Support.v4 NuGet Package](https://www.nuget.org/packages/Xamarin.Android.Support.v4/):
 
@@ -226,7 +226,7 @@ And then create a new Blank App (Xamarin Forms Portable), as following:
 **Figure 15: Creating a Blank App (Xamarin Forms Portable)**
 
 
-Which result will be something as described in figure 16:
+In which the result will be something as described in figure 16:
 
 ![Xamarin Workshop - Figure 16](ImagesForGuides/figure16.png)
 
@@ -235,10 +235,10 @@ Which result will be something as described in figure 16:
 
 The ENEI.SessionApp solution is defined by four projects:
 
-* **ENEI.SessionsApp:** portable class library project, which will contain the shared code between targets. This project is independent of the platform;
-* **ENEI.SessionsApp.Droid:** Xamarin Android project, which define the Android application and knows the Android API;
-* **ENEI.SessionsApp.iOS:** Xamarin iOS project, which define the iOS application and knows the iOS API;
-* **ENEI.SessionsApp.WinPhone:** Windows Phone project, which define the Windows Phone application and knows the Windows Phone API;
+* **ENEI.SessionsApp:** portable class library project, which will contain the shared code between targets. This project is regardless of the platform;
+* **ENEI.SessionsApp.Droid:** Xamarin Android project, which defines the Android application and recognize the Android API;
+* **ENEI.SessionsApp.iOS:** Xamarin iOS project, which defines the iOS application and recognize the iOS API;
+* **ENEI.SessionsApp.WinPhone:** Windows Phone project, which defines the Windows Phone application and recognize the Windows Phone API;
 
 Now, you should update the [Nuget Packages](https://www.nuget.org/) available in the project. This case you only need to update the [Xamarin Forms Nuget Package](https://www.nuget.org/packages/Xamarin.Forms), as described in figure 17 and figure 18:
 
@@ -261,7 +261,7 @@ The result will be
 
 You need to do the same in the others project, if needed.
 
-Before run the application, you should select the solution and define the build and deploy apps, as following:
+Before running the application, you should select the solution and define the build and deploy apps, as following:
 
 ![Xamarin Workshop - Figure 20](ImagesForGuides/figure20.png)
 
@@ -272,7 +272,7 @@ Wowwww you ready to create your 1010 ENEI app!
 
 #### Running the application
 
-Depending the scenario you are, you will have more or less platforms covered, here is an overview:
+Depending on the scenario you are, you will have more numbers or less numbers platforms covered, here is an overview:
 
 * **Using Xamarin Studio in a Mac:** Android + iOS Apps
 * **Using Xamarin Studio in Windows:** Android Apps
@@ -280,10 +280,10 @@ Depending the scenario you are, you will have more or less platforms covered, he
 * **Using Visual Studio with Xamarin plugin:** Windows, Android and iOS (*) apps.
 
 
-(*) Is required a Xamarin Build Host in a Mac connect to Visual Studio.
+(*) Is required to a Xamarin Build Host in a Mac connect to Visual Studio.
 
 
-In figure 21, is possible to see the Android, iOS and Windows Phone applications running at the same time. The Android app is running in Xamarin Android Player, iOS app is running in IPhone Simulator and Windows Phone application is running in a Lumia 1020 device (which is connect to a Windows running in a Parallels, in a Mac).
+In figure 21, it is possible to see the Android, iOS and the Windows Phone applications running at the same time. The Android app is running in Xamarin Android Player; the iOS app is running in IPhone Simulator and the Windows Phone application is running on a Lumia 1020 device (which is connected to a Windows running in a Parallels, in a Mac).
 
 ![Xamarin Workshop - Figure 21](ImagesForGuides/figure21.png)
 
@@ -295,7 +295,7 @@ In figure 21, is possible to see the Android, iOS and Windows Phone applications
 #### Additional notes - Xamarin Forms initialization 
 
 Each developer should understand how Xamarin Forms app is defined. This way, developers should know:
-In ENEI.SessionsApp.iOS app, more specific in AppDelegate.cs has the following code:
+In ENEI.SessionsApp.iOS app, more specifically  in AppDelegate.cs has the following code:
 
      public override bool FinishedLaunching(UIApplication app, NSDictionary options)
      {
@@ -306,8 +306,8 @@ In ENEI.SessionsApp.iOS app, more specific in AppDelegate.cs has the following c
     }
 
 
-Which initialize the Xamarin Forms and define which class has the start point for the Xamarin Forms App that defines the main page created with the Xamarin Forms API.
-The same happens in ENEI.Sessions.Android app, more specific in MainActivity.cs:
+Which initializes the Xamarin Forms and defines which class has the starting point for the Xamarin Forms App that defines the main page created with the Xamarin Forms API.
+The same happens in ENEI.Sessions.Android app, more specifically in MainActivity.cs:
 
     protected override void OnCreate(Bundle bundle)
     {
@@ -318,7 +318,7 @@ The same happens in ENEI.Sessions.Android app, more specific in MainActivity.cs:
     }
 
 
-And in ENEI.Sessions.WinPhone app, more specific in MainPage.xaml.cs
+And in ENEI.Sessions.WinPhone app, more specifically in MainPage.xaml.cs
 
       public MainPage()
       {
@@ -356,7 +356,7 @@ At this moment, the App.cs defined in ENEI.SessionsApp (portable class library) 
 
 
 
-As mentioned early, the ENEI.SessionsApp will be the project, which will have the shared code between targets and it is independent of the platform. This way, in this project you will define the Model, the Views, the data source and other useful class that can be reused between platforms.
+As mentioned early, the ENEI.SessionsApp will be the project, which will have the shared code between targets and it is regardless of the platform. This way, in this project you will define the Model, the Views, the data source and another useful class that can be reused between platforms.
 
 ### 2. Create the model and data source
 
