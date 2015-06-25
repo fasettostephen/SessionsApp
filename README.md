@@ -82,55 +82,55 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 
   **Demo** |  **Demo** |  **Online Guide**   | **PDF Guide**   | **Word Guide**   |
 :---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ | 
-[1. Create a Xamarin Forms project](src/1.%20Create%20a%20Xamarin%20Forms%20project) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[2. Create the model and data source](src/2.%20Create%20the%20model%20and%20data%20source) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[3. Create the SessionsView](src/3.%20Create%20the%20SessionsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[4. Create the SessionDetailsView](src/4.%20Create%20the%20SessionDetailsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[5. Add ShareService](src/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[6. Add splash screen, name and version](src/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | 
-[7. Add support to WinRT apps](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[8. Change the App.cs to App.xaml](src/8. Change the App.cs to App.xaml) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[9. Use MVVM pattern](src/9.%20Use%20MVVM%20Pattern) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[10. Move ItemTemplate to Resources](src/10.%20Move%20ItemTemplate%20to%20Resources) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
-[11. Create a LoginView](src/11.%20Create%20a%20LoginView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
+[1. Creating a Xamarin Forms project](src/1.%20Create%20a%20Xamarin%20Forms%20project) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[2. Creating the model and data source](src/2.%20Create%20the%20model%20and%20data%20source) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[3. Creating the SessionsView](src/3.%20Create%20the%20SessionsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[4. Creating the SessionDetailsView](src/4.%20Create%20the%20SessionDetailsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[5. Adding ShareService](src/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[6. Adding splash screen, name and version](src/6.%20Add%20splash%20screen%2C%20name%20and%20version) | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | 
+[7. Adding support to WinRT apps](src/7.%20Add%20support%20to%20WinRT%20apps) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[8. Change+ing the App.cs to App.xaml](src/8. Change the App.cs to App.xaml) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[9. Using MVVM pattern](src/9.%20Use%20MVVM%20Pattern) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[10. Moving ItemTemplate to Resources](src/10.%20Move%20ItemTemplate%20to%20Resources) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
+[11. Creating a LoginView](src/11.%20Create%20a%20LoginView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |
 
 
 ## :white_medium_square: Guides
 
 * [Guides by steps](Guides)
-	1. [Create a Xamarin Forms project](Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md)
-	    * [Using Xamarin Studio in Mac](Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#using-xamarin-studio-in-mac)
-		* [Using Xamarin Studio in Windows](Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#using-xamarin-studio-in-windows)
-		* [Using Visual Studio in Windows](Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#using-visual-studio-in-windows)
-		* [Running the application](Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#running-the-application)
-		* [Additional notes - Xamarin Forms initialization ](Guides/1.%20Create%20a%20Xamarin%20Forms%20project.md#additional-notes---xamarin-forms-initialization)
-	2. [Create the model and data source](Guides/2.%20Create%20the%20model%20and%20the%20data%20source.md)
-	3. [Create the SessionsView](Guides/3.%20Create%20the%20SessionsView.md)
-		* [Create the Xaml page](Guides/3.%20Create%20the%20SessionsView.md#create-the-xaml-page)
-		* [Create the Header](Guides/3.%20Create%20the%20SessionsView.md#create-the-header)
-			*[Defining the Images for each platform](Guides/3.%20Create%20the%20SessionsView.md#defining-the-images-for-each-platform)
-		* [Create the Listview](Guides/3.%20Create%20the%20SessionsView.md#create-the-listview)
-		* [Create the ItemTemplate](Guides/3.%20Create%20the%20SessionsView.md#create-the-itemtemplate)
-		* [Create the menu for each Session](Guides/3.%20Create%20the%20SessionsView.md#create-the-menu-for-each-session)
-			* [Running the application](Guides/3.%20Create%20the%20SessionsView.md#running-the-application-1)
-	4. [Create the SessionDetailsView](Guides/4.%20Create%20the%20SessionDetailsView.md)
-		* [Details Gesture](Guides/4.%20Create%20the%20SessionDetailsView.md#the-details-gesture)
-		* [Running the application](Guides/4.%20Create%20the%20SessionDetailsView.md#running-the-application-2)
-	5. [Add ShareService](Guides/5.%20Add%20ShareService.md)
-	    * [Windows Phone](Guides/5.%20Add%20ShareService.md#windows-phone)
-		* [Android](Guides/5.%20Add%20ShareService.md#android)
-		* [iOS](Guides/5.%20Add%20ShareService.md#ios)
-	6. [Add splah screen, name and version](Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md)
-		* [Define the splash screen](Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md#define-the-splash-screen)
-		* [Define the name and the version for each platform](Guides/6.%20Add%20splash%20screen%2C%20name%20and%20version.md#define-the-name-and-the-version-for-each-platform)
-	7. [Add support for WinRT Apps](Guides/7.%20Add%20support%20for%20WinRT%20Apps.md)
-	8. [Change the App.cs to App.xaml](Guides/8.%20Change%20the%20App.cs%20to%20App.xaml%20copy.md)
-	9. [Use MVVM pattern](Guides/9.%20Use%20MVVM%20pattern.md)
-	10. [Move ItemTemplate to Resources](Guides/10.%20Move%20ItemTemplate%20to%20Resources.md)
-	11. [Create a LoginView](Guides/11.%20Create%20a%20LoginView.md)
-	    * [Creating the UI using Font Awesome](Guides/11.%20Create%20a%20LoginView.md#creating-the-ui-using-font-awesome)
-		* [Create the LoginViewModel](Guides/11.%20Create%20a%20LoginView.md#create-the-loginviewmodel)
-		* [Handle Navigation](Guides/11.%20Create%20a%20LoginView.md#handle-navigation)
+	1. [Create a Xamarin Forms project](Guides/1.%20Creating%20a%20Xamarin%20Forms%20project.md)
+	    * [Using Xamarin Studio in Mac](Guides/1.%20Creating%20a%20Xamarin%20Forms%20project.md#using-xamarin-studio-in-mac)
+		* [Using Xamarin Studio in Windows](Guides/1.%20Creating%20a%20Xamarin%20Forms%20project.md#using-xamarin-studio-in-windows)
+		* [Using Visual Studio in Windows](Guides/1.%20Creating%20a%20Xamarin%20Forms%20project.md#using-visual-studio-in-windows)
+		* [Running the application](Guides/1.%20Creating%20a%20Xamarin%20Forms%20project.md#running-the-application)
+		* [Additional notes - Xamarin Forms initialization ](Guides/1.%20Creating%20a%20Xamarin%20Forms%20project.md#additional-notes---xamarin-forms-initialization)
+	2. [Creating the model and data source](Guides/2.%20Creating%20the%20model%20and%20the%20data%20source.md)
+	3. [Creating the SessionsView](Guides/3.%20Creating%20the%20SessionsView.md)
+		* [Creating the Xaml page](Guides/3.%20Creating%20the%20SessionsView.md#create-the-xaml-page)
+		* [Creating the Header](Guides/3.%20Creating%20the%20SessionsView.md#create-the-header)
+			*[Defining the Images for each platform](Guides/3.%20Creating%20the%20SessionsView.md#defining-the-images-for-each-platform)
+		* [Creating the Listview](Guides/3.%20Creating%20the%20SessionsView.md#creating-the-listview)
+		* [Creating the ItemTemplate](Guides/3.%20Creating%20the%20SessionsView.md#creating-the-itemtemplate)
+		* [Creating the menu for each Session](Guides/3.%20Creating%20the%20SessionsView.md#creating-the-menu-for-each-session)
+			* [Running the application](Guides/3.%20Creating%20the%20SessionsView.md#running-the-application-1)
+	4. [Creating the SessionDetailsView](Guides/4.%20Creating%20the%20SessionDetailsView.md)
+		* [Details Gesture](Guides/4.%20Creating%20the%20SessionDetailsView.md#the-details-gesture)
+		* [Running the application](Guides/4.%20Creating%20the%20SessionDetailsView.md#running-the-application-2)
+	5. [Adding ShareService](Guides/5.%20Adding%20ShareService.md)
+	    * [Windows Phone](Guides/5.%20Adding%20ShareService.md#windows-phone)
+		* [Android](Guides/5.%20Adding%20ShareService.md#android)
+		* [iOS](Guides/5.%20Adding%20ShareService.md#ios)
+	6. [Adding splah screen, name and version](Guides/6.%20Adding%20splash%20screen%2C%20name%20and%20version.md)
+		* [Defining the splash screen](Guides/6.%20Adding%20splash%20screen%2C%20name%20and%20version.md#defining-the-splash-screen)
+		* [Defining the name and the version for each platform](Guides/6.%20Adding%20splash%20screen%2C%20name%20and%20version.md#defining-the-name-and-the-version-for-each-platform)
+	7. [Adding support for WinRT Apps](Guides/7.%20Adding%20support%20for%20WinRT%20Apps.md)
+	8. [Changing the App.cs to App.xaml](Guides/8.%20Changing%20the%20App.cs%20to%20App.xam.md)
+	9. [Using MVVM pattern](Guides/9.%20Using%20MVVM%20pattern.md)
+	10. [Moving ItemTemplate to Resources](Guides/10.%20Moving%20ItemTemplate%20to%20Resources.md)
+	11. [Creating a LoginView](Guides/11.%20Creating%20a%20LoginView.md)
+	    * [Creating the UI using Font Awesome](Guides/11.%20Creating%20a%20LoginView.md#creating-the-ui-using-font-awesome)
+		* [Creating the LoginViewModel](Guides/11.%20Creating%20a%20LoginView.md#creating-the-loginviewmodel)
+		* [Handling Navigation](Guides/11.%20Creating%20a%20LoginView.md#handling-navigation)
 * [Wrapping Up](Guides/Wrapping%20Up.md)
 	 
 * [Complete Guide: 1010 ENEI || Xamarin Workshop](Guides/1010ENEIGuide.md)  
