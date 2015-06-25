@@ -16,31 +16,31 @@
 		* [Using Visual Studio in Windows](#using-visual-studio-in-windows)
 		* [Running the application](#running-the-application)
 		* [Additional notes - Xamarin Forms initialization ](#additional-notes---xamarin-forms-initialization)
-	2. [Create the model and data source](#2-create-the-model-and-data-source)
-	3. [Create the SessionsView](#3-create-the-sessionsview)
-		* [Create the Xaml page](#create-the-xaml-page)
-		* [Create the Header](#create-the-header)
+	2. [Creating the model and data source](#2-creating-the-model-and-data-source)
+	3. [Creating the SessionsView](#3-creating-the-sessionsview)
+		* [Creating the Xaml page](#creating-the-xaml-page)
+		* [Creating the Header](#creating-the-header)
 			* [Defining the Images for each platform](#defining-the-images-for-each-platform)
-		* [Create the Listview](#create-the-listview)
-		* [Create the ItemTemplate](#create-the-itemtemplate)
-		* [Create the menu for each Session](#create-the-menu-for-each-session)
+		* [Creating the Listview](#creating-the-listview)
+		* [Creating the ItemTemplate](#creating-the-itemtemplate)
+		* [Creating the menu for each Session](#creating-the-menu-for-each-session)
 			* [Running the application](#running-the-application-1)
-	4. [Create the SessionDetailsView](#4-create-the-sessiondetailsview)
+	4. [Creating the SessionDetailsView](#4-creating-the-sessiondetailsview)
 		* [Details Gesture](#the-details-gesture)
 		* [Running the application](#running-the-application-2)
-	5. [Add ShareService](#5-add-shareservice)
+	5. [Adding ShareService](#5-adding-shareservice)
 	    * [Windows Phone](#windows-phone)
 		* [Android](#android)
 		* [iOS](#ios)
-	6. [Add splash screen, name and version](#6-add-splash-screen-name-and-version)
-	7. [Add support for WinRT Apps](#7-add-support-for-winrt-apps)
-	8. [Change the App.cs to App.xaml](#8-change-the-appcs-to-appxaml)
-	9. [Use MVVM pattern](#9-use-mvvm-pattern)
-    10. [Move ItemTemplate to Resources](#10-move-itemtemplate-to-resources)
-	11. [Create a LoginView](#11-create-a-loginview)
+	6. [Adding splash screen, name and version](#6-adding-splash-screen-name-and-version)
+	7. [Adding support for WinRT Apps](#7-adding-support-for-winrt-apps)
+	8. [Changing the App.cs to App.xaml](#8-changing-the-appcs-to-appxaml)
+	9. [Using MVVM pattern](#9-using-mvvm-pattern)
+    10. [Moving ItemTemplate to Resources](#10-moving-itemtemplate-to-resources)
+	11. [Creating a LoginView](#11-creating-a-loginview)
 		* [Creating the UI using Font Awesome](#creating-the-ui-using-font-awesome)
-		* [Create the LoginViewModel](#create-the-loginviewmodel)
-		* [Handle Navigation](#handle-navigation)
+		* [Creating the LoginViewModel](#creating-the-loginviewmodel)
+		* [Handling Navigation](#handling-navigation)
 		
 * [Wrapping Up](#wrapping-up)
 
@@ -358,16 +358,16 @@ At this moment, the App.cs defined in ENEI.SessionsApp (portable class library) 
 
 As mentioned early, the ENEI.SessionsApp will be the project, which will have the shared code between targets and it is regardless of the platform. This way, in this project you will define the Model, the Views, the data source and another useful class that can be reused between platforms.
 
-### 2. Create the model and data source
+### 2. Creating the model and the data source
 
 #### The model
 
-Before create the UI, you need to define the model, for it you will define:
+Before creating the UI, you need to define the model, for it you will define:
 
-* **Session:** class that define a session from 1010 ENEI event
-* **Speaker:** class that define a speaker
+* **Session:** the class that defines a session from 1010 ENEI event
+* **Speaker:** the class that defines a speaker
 
-Each session should have a speaker (In real scenarios can have more than one!). Figure 22 define the class diagram from the model:
+Each session should have a speaker (In real scenarios it can have more than one!). Figure 22 defines the class diagram from the model:
 
 ![Xamarin Workshop - Figure 22](ImagesForGuides/figure22.png)
 
@@ -375,7 +375,7 @@ Each session should have a speaker (In real scenarios can have more than one!). 
 **Figure 22: The model**
 
 
-In ENEI.SessionsApp project create the Session and the Speaker class in a “Model” folder, as described in figures 23 and 24:
+In ENEI.SessionsApp project create the Session and the Speaker classes in a “Model” folder, as described in figures 23 and 24:
 
 ![Xamarin Workshop - Figure 23](ImagesForGuides/figure23.png)
 
@@ -494,7 +494,9 @@ And the Speaker class can be defined by:
     }
 
 
-> Both class implements the interface **INotifyPropertyChangedv**, which allow notify the UI about changes in model and this way the data will be update in UI (when is used the bindings).
+> Both classes implements the interface **INotifyPropertyChangedv**, which allow notify the UI about changes in model and this way the data will be updated in the UI (when is used the bindings).
+
+
 #### The data source
 
 The data source will define the data that will be loaded by the application, at this moment you will have hard code data, but in real scenarios you should have a file, database or services to provide it.
@@ -502,11 +504,11 @@ The data source will define the data that will be loaded by the application, at 
 Get the **SessionsDataSource class** [here](https://github.com/saramgsilva/XamarinWorkshop/blob/master/1010ENEI/2.%20Create%20the%20model%20and%20data%20source/ENEI.SessionsApp/ENEI.SessionsApp/Data/SessionsDataSource.cs), or create your own data.
 
 
-### 3. Create the SessionsView
+### 3. Creating the SessionsView
 
-In this step, you will create the user interface to the SessionsView (which is the main page) to show the data defined in the last step.
+In this step, you will create the user interface for the SessionsView (which is the main page), to show the data defined in the last step.
 
-#### Create the Xaml page
+#### Creating the Xaml page
 
 In Xamarin Studio, select the ENEI.SessionsApp project and create a folder called “Views”, as described in figure 25 and figure 26:
 
@@ -519,7 +521,7 @@ In Xamarin Studio, select the ENEI.SessionsApp project and create a folder calle
 **Figure 26: The Views folder in the project**
 
 
-Then select the folder “Views” , do a double click with the mouse to open the context and the click in “Add”> “New File...” as described in figure 27:
+Then select the folder “Views” , do a double click with the mouse to open the context and then click in “Add”> “New File...” as described in figure 27:
 
 ![Xamarin Workshop - Figure 27](ImagesForGuides/figure27.png)
 
@@ -542,17 +544,17 @@ The result will be something as following:
 
 The SessionsView xaml is defined by:
 
-* The **xaml** file which define the user interface 
-* The **cs** file which define the code behind 
+* The **xaml** file which defines the user interface 
+* The **cs** file which defines the code behind 
 
-> This approach is really useful when designers and developers work together, and using MVVM pattern it allow to have UI separated from the behavior of the page.
+> This approach is really useful when designers and developers works together, and using MVVM pattern allows to have the UI separated from the behavior of the page.
 
 
 > See more about Xaml in this article [Xamarin.Forms Xaml Basics](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/). 
 
 
 
-Now let’s change the App.cs in ENEI.SessionsApp to use the SessionsView:
+Now let’s change the App.cs in ENEI.SessionsApp project, to use the SessionsView:
 
     public class App : Application
     {
@@ -567,15 +569,15 @@ Now let’s change the App.cs in ENEI.SessionsApp to use the SessionsView:
         }
 
 
-In this case, you defined the MainPage with a NavigationPage which content is defined by SessionView. The NavigationPage is required when the application required navigation between page and the application should have only one NavigationPage.
-At this moment, if you run the application you will not have content and you should have something like as described in figure 30:
+In this case, you defined the MainPage with a NavigationPage which content is defined by SessionView. The NavigationPage is required when the application requires navigation between pages, and the application should have only one NavigationPage.
+At this moment, if you run the application you will not have any content and you should have something like as described in figure 30:
 
 ![Xamarin Workshop - Figure 30](ImagesForGuides/figure30.png)
 **Figure 30: The xaml page code**
 
 Now let’s define the UI…
 
-#### Create the Header
+#### Creating the Header
 
 The first thing you should define is the Title and the Icon used in the header of the page, something like as following:
 
@@ -597,9 +599,9 @@ Which code can be:
              Icon="ic_action_users.png">
 
 
-This will be showed in Android and in iOS but for Windows Phone 8.0 we need to create a workaround for it, as we will see below.
+This will be showed in Android and in iOS, but for Windows Phone 8.0 we need to create a workaround for it, as we will see below.
 
-> In Android, more specific in the MainActivity is required (in this case) to set the Icon in ActionBar as following: ActionBar.SetIcon(Resource.Drawable.ic_action_users); 
+> In Android, more specifically in the MainActivity is required (in this case) to set the Icon in ActionBar as following: ActionBar.SetIcon(Resource.Drawable.ic_action_users); 
 
 The **SessionsView** is a **ContentPage** which is a simple page provided by [Xamarin Forms API](http://api.xamarin.com/?link=N%3aXamarin.Forms) (see more in [Xamarin Forms Gallery](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/controls/pages/)). To define its content, you should use [controls layouts](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/controls/layouts/) like StackLayout or Grid, for example.
 
@@ -608,9 +610,9 @@ The **SessionsView** is a **ContentPage** which is a simple page provided by [Xa
 **Figure 32: Control Layouts**
 
 
-This way, let’s choose the Grid as control layout to define two rows and one columns, where:
+This way, let’s choose the Grid as control layout to define two rows and one column, where:
 
-* The first row has the header for Windows Phone (hidden to the others platforms)
+* The first row has the header for Windows Phone (hidden for the others platforms)
 * The second row has the ListView to show the sessions. 
 
 The code for it will be something like as following:
@@ -653,7 +655,7 @@ The code for it will be something like as following:
 
 ##### Defining the Images for each platform
 
-In the last step you used the image “ic_action_users.png” which need to be add to each project (ENEI.SessionApp.Android, ENEI.SessionApp.iOS and ENEI.SessionApp.WinPhone). This way, each app will have its own images, which should be defined following the platform specifications, i.e., each image should provide the right resolution by platform.
+In the last step you used the image “ic_action_users.png” which need to be added to each project (ENEI.SessionApp.Android, ENEI.SessionApp.iOS and ENEI.SessionApp.WinPhone). This way, each app will have its own images, which should be defined following the platform specifications, i.e., each image should provide the right resolution by platform.
 
 Get the images & assets by platform [here](https://github.com/saramgsilva/XamarinWorkshop/tree/master/1010ENEI/0.%20Assests%20and%20Images), and see more about this subject in this [article](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/images/).
 
@@ -664,13 +666,12 @@ At this moment, you should have
  
 **Figure 33: The Windows Phone, iOS and Android applications**
 
-#### Create the Listview
+#### Creating the Listview
 
-The next step is to define the list of the session from the 1010 ENEI, which were defined in the topic “The Data Source”. 
-To show the list of the session you will use a ListView which must have:
+The next step is to define the list of the session from the 1010 ENEI, in which were defined in the topic “The Data Source”. 
+To show the list of the sessions you will use a ListView which must have:
 
-* **ItemsSource** defined with the list of sessions
-* **ItemTemplate** defined with the template for each row 
+* The **ItemsSource** which defines the list of sessions* The **ItemTemplate** which defines the template for each row
 
 Let’s define the first version of the ListView as following:
 
@@ -693,9 +694,9 @@ Let’s define the first version of the ListView as following:
     </ListView>
   
 
-The Listview has the name “SessionsList”, which is defined in the second row of the grid that define the root content of the page, it has the “ItemSelected” subscribed to ignore the “SelectItem”, the “SeparatorColor" is defined as blue and the “ItemsSource” is binding with the “Sessions” property (which is a property from the object defined in “BindingContext”.
+The Listview has the name “SessionsList”, which is defined in the second row of the grid that defines the root content of the page, it has the “ItemSelected” subscribed to ignore the “SelectItem”, the “SeparatorColor" is defined as blue and the “ItemsSource” is binding with the “Sessions” property (which is a property from the object defined in “BindingContext”).
 
-> Data bindings allow properties of two objects to be linked so that a change in one causes a change in the other. See more about it in these article [Data Binding Basics](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/data_binding_basics/) and [From Data Bindings to MVVM](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/data_bindings_to_MVVM/).
+> Data bindings allows properties of two objects to be linked so that a change in one causes a change in the other. See more about it in these article [Data Binding Basics](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/data_binding_basics/) and [From Data Bindings to MVVM](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/data_bindings_to_MVVM/).
 
 
 Each row from the ListView can be defined with static or dynamic size. In this case was defined a static size for each platform (related with screen resolution). A developer that needs to have different row’s size depending the data showed is recommended to use the property HasUnevenRows.
@@ -742,9 +743,9 @@ To complete, in code behind, you need to define the Sessions that should be an �
 > In this case, you will not use MVVM pattern, which is extremely recommended in real projects. To keep it simple the code behind will have the behavior used by UI that in a MVVM pattern is defined in the ViewModel.
 
 
-#### Create the ItemTemplate
+#### Creating the ItemTemplate
 
-The Listview has the “ItemTemplate” property that allows defining a “DataTemplate” for each row. In this case you will define a template as described in figure 34, which code will be:
+The Listview has the “ItemTemplate” property that allows to define a “DataTemplate” for each row. In this case you will define a template as described in figure 34, which code will be:
 
      <ListView.ItemTemplate>
          <DataTemplate>
@@ -815,7 +816,7 @@ Running the application you will have the following:
 
 **Figure 35: The Windows Phone, iOS and Android application showing sessions from 1010 ENEI**
 
-#### Create the menu for each Session
+#### Creating the menu for each Session
 
 To create the menu for each session as described in figure 36, you need to change the ItemTemplate defined above:
 
@@ -926,7 +927,7 @@ Where the event’s handler will be defined as following:
             }
         }
 
-> Do the same for “Like” and for Share and Details we will see it in next steps.
+> Do the same for "Like", for Share and Details we will see it in the next steps
 
 The Favorite option uses a FavoriteImageConverter which allow to show the right image based if the user selected it as favorite or not, this way if the favorite option is red it means the user selected the session as favorite, the blue color is defined by default.
 
@@ -967,7 +968,7 @@ At this moment you should have the UI from the 1010 ENEI Sessions App as describ
 
 
 
-### 4. Create the SessionDetailsView
+### 4. Creating the SessionDetailsView
 
 In the last step, you created the menu for each Session and it was created the “Details” option, which has the goal to show the details from a selected session. 
 
@@ -1080,7 +1081,7 @@ At this moment, you should navigate to the Session details view, which result sh
 
 
 
-### 5. Add ShareService
+### 5. Adding ShareService
 
 An application which allow to share content in social networks brings more value to the users, because allow to share with others something the user think is important or relevant. An application for events like 1010 ENEI Sessions App could not miss this feature.
 
@@ -1225,14 +1226,14 @@ This way, we are ready to call the share service in the SessionsView using Depen
 At this moment the 1010 ENEI Sessions App has support to share session in social network!
 
 
-### 6. Add splash screen, name and version
+### 6. Adding splash screen, name and version
 
 
 In this step you will learn how to create the splash screen to all platforms and you learn to define the name & version of the application.
 
 
 
-#### Define the splash screen
+#### Defining the splash screen
 
 The splash screen in mobile application is the first screen that the user will see, in some applications it is used to load initial data. It is defined in different ways to each platform and for each one you will learn how it works:
 
@@ -1321,7 +1322,7 @@ Windows Phone application supports splash screen by default, this way it only re
 
 
 
-#### Define the name and the version for each platform
+#### Defining the name and the version for each platform
 
 
 To define the name & the version for each platform you will need:
@@ -1380,7 +1381,7 @@ Open the manifest file as describe in the figure 6-8 and figure 6-9:
 
 
 
-### 7. Add support for WinRT Apps
+### 7. Adding support for WinRT Apps
 
 
 In this step you will learn how to add support to WinRT apps, which means you will create an Universal apps that will use [Xamarin Forms for Windows (Preview)](https://www.nuget.org/packages/Xamarin.Forms.Windows/).
@@ -1752,17 +1753,17 @@ At this moment if you run the applications you will have something as following:
 
 
 
-### 8. Change the App.cs to App.xaml
+### 8. Changing the App.cs to App.xaml
 
 
 In this step you will learn how to change the **App.cs** to have the **App.xaml** file, which will define the Xamarin Forms application.In the **ENEI.SessionsApp** project is possible to find the App.cs file which define the application. It is a simple class defined in a *.cs file, which can be defined using a XAML approach. For it you need to create a new XAML page as described in figure 51 and figure 52:
 
 
 ![**Figure 51:** Add new item (using Visual Studio)](ImagesForGuides/figure51.png)
-**Figure 51: Add new item (using Visual Studio)**
+**Figure 51: Adding a new item (using Visual Studio)**
 
 ![**Figure 52:** Add new Forms Xaml Page called App (using Visual Studio)](ImagesForGuides/figure52.png)
-**Figure 52: Add new Forms Xaml Page called App (using Visual Studio)**
+**Figure 52: Adding a new Forms Xaml Page called App (using Visual Studio)**
 
 The result will be something as following:
 **App.xaml**
@@ -1783,7 +1784,7 @@ At this moment, it is a content page that is not our goal, but it is the workaro
       <?xml version="1.0" encoding="utf-8" ?>      <Application xmlns="http://xamarin.com/schemas/2014/forms"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             x:Class="ENEI.SessionsApp.App">      </Application>	 **App.xaml.cs**
     public partial class App : Application    {        public App()        {            InitializeComponent();        }    } With it, you will have to App class that inherits from Xamarin.Forms.Application, to avoid it, you should delete the App.cs file, but before we need to move the code from the App.cs to App.xaml.cs, which result will be something as following:     public class App : Application    {        public App()        {            // The root page of your application            MainPage = new NavigationPage(new SessionsView())            {                  BarBackgroundColor = Color.White,                BarTextColor = Color.Black,                BackgroundColor = Color.White,            };        }        protected override void OnStart()        {            // Handle when your app starts        }        protected override void OnSleep()        {            // Handle when your app sleeps        }        protected override void OnResume()        {            // Handle when your app resumes        }    }If you run the application it must behave as before.
 
-### 9. Use MVVM Pattern
+### 9. Using MVVM Pattern
 
 
 In this step you will learn how refactor your code to use the MVVM pattern. > “The Model-View-ViewModel (MVVM) pattern helps you to cleanly separate the business and presentation logic of your application from its user interface (UI). Maintaining a clean separation between application logic and UI helps to address numerous development and design issues and can make your application much easier to test, maintain, and evolve. It can also greatly improve code re-use opportunities and allows developers and UI designers to more easily collaborate when developing their respective parts of the application.” 
@@ -1846,7 +1847,7 @@ And in the constructor is required to initialize each one, as following:
 *  [Part 3. XAML Markup Extensions](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/xaml_markup_extensions)*  [Part 4. Data Binding Basics](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_binding_basics)*  [Part 5. From Data Binding to MVVM](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_bindings_to_mvvm)
 
 
-### 10. Move ItemTemplate to Resources
+### 10. Moving ItemTemplate to Resources
 
 
 
@@ -1984,7 +1985,7 @@ Now you can use the DataTemplate defined in Resources, using the key defined “
 
 This way, the SessionsView.xaml looks cleaner, it is easier to understand the code and is possible to reuse the DataTemplate if needed.
 
-### 11. Create a LoginView 
+### 11. Creating a LoginView 
 
 
 In this step you will learn how to create the user interface to the LoginView using the Font Awesome, how to create the LoginViewModel and how to handle the navigation between pages.
@@ -2240,7 +2241,7 @@ When you run the application the result will something as described in figure 61
 
 
 
-#### Create the LoginViewModel
+#### Creating the LoginViewModel
 
 At this moment, you have the user interface to the LoginView, this way it is possible to define the LoginViewModel, which will have the action to each option in LoginView.
 
@@ -2325,7 +2326,7 @@ When you run the application you should call the **DoLogin** method, as followin
 
 
 
-#### Handle Navigation
+#### Handling Navigation
 
 
 At this moment you do not have the authentication, but you can create the complete flow to the application. This way, you need to define the navigation between pages, which is the main goal of this step.
