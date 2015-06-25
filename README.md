@@ -83,7 +83,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
   **Demo** |  **Demo** |  **Online Guide**   | **PDF Guide**   | **Word Guide**   |
 :---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ | 
 [1. Creating a Xamarin Forms project](src/1.%20Create%20a%20Xamarin%20Forms%20project) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
-[2. Creating the model and data source](src/2.%20Create%20the%20model%20and%20data%20source) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
+[2. Creating the model and the data source](src/2.%20Create%20the%20model%20and%20data%20source) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [3. Creating the SessionsView](src/3.%20Create%20the%20SessionsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [4. Creating the SessionDetailsView](src/4.%20Create%20the%20SessionDetailsView) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
 [5. Adding ShareService](src/5.%20Add%20ShareService) | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | 
@@ -107,8 +107,8 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 	2. [Creating the model and data source](Guides/2.%20Creating%20the%20model%20and%20the%20data%20source.md)
 	3. [Creating the SessionsView](Guides/3.%20Creating%20the%20SessionsView.md)
 		* [Creating the Xaml page](Guides/3.%20Creating%20the%20SessionsView.md#create-the-xaml-page)
-		* [Creating the Header](Guides/3.%20Creating%20the%20SessionsView.md#create-the-header)
-			*[Defining the Images for each platform](Guides/3.%20Creating%20the%20SessionsView.md#defining-the-images-for-each-platform)
+		* [Creating the Header](Guides/3.%20Creating%20the%20SessionsView.md#create-the-header) 
+			* [Defining the Images for each platform](Guides/3.%20Creating%20the%20SessionsView.md#defining-the-images-for-each-platform)
 		* [Creating the Listview](Guides/3.%20Creating%20the%20SessionsView.md#creating-the-listview)
 		* [Creating the ItemTemplate](Guides/3.%20Creating%20the%20SessionsView.md#creating-the-itemtemplate)
 		* [Creating the menu for each Session](Guides/3.%20Creating%20the%20SessionsView.md#creating-the-menu-for-each-session)
@@ -124,7 +124,7 @@ In this **Xamarin Workshop**, you will learn how to create a Xamarin Forms app, 
 		* [Defining the splash screen](Guides/6.%20Adding%20splash%20screen%2C%20name%20and%20version.md#defining-the-splash-screen)
 		* [Defining the name and the version for each platform](Guides/6.%20Adding%20splash%20screen%2C%20name%20and%20version.md#defining-the-name-and-the-version-for-each-platform)
 	7. [Adding support for WinRT Apps](Guides/7.%20Adding%20support%20for%20WinRT%20Apps.md)
-	8. [Changing the App.cs to App.xaml](Guides/8.%20Changing%20the%20App.cs%20to%20App.xam.md)
+	8. [Changing the App.cs to App.xaml](Guides/8.%20Changing%20the%20App.cs%20to%20App.xaml.md)
 	9. [Using MVVM pattern](Guides/9.%20Using%20MVVM%20pattern.md)
 	10. [Moving ItemTemplate to Resources](Guides/10.%20Moving%20ItemTemplate%20to%20Resources.md)
 	11. [Creating a LoginView](Guides/11.%20Creating%20a%20LoginView.md)
