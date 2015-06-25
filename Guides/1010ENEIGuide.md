@@ -5,7 +5,7 @@
 **Table of Contents**
 
 
-* [1010 ENEI || Xamarin Workshop](#1010-enei--xamarin-workshop) [![PDF Guide](ImagesForGuides/PDF-icon.png)](CompleteGuide-1010ENEI-Xamarin Workshop.pdf)
+* [1010 ENEI || Xamarin Workshop](CompleteGuide-1010ENEI-Xamarin Workshop.pdf) [![PDF Guide](ImagesForGuides/PDF-icon.png)](CompleteGuide-1010ENEI-Xamarin Workshop.pdf)
 * [Scope](#scope)
 * [Abstract](#abstract)
 * [Requirements](#requirements)
@@ -16,7 +16,7 @@
 		* [Using Visual Studio in Windows](#using-visual-studio-in-windows)
 		* [Running the application](#running-the-application)
 		* [Additional notes - Xamarin Forms initialization ](#additional-notes---xamarin-forms-initialization)
-	2. [Creating the model and data source](#2-creating-the-model-and-data-source)
+	2. [Creating the model and the data source](#2-creating-the-model-and-the-data-source)
 	3. [Creating the SessionsView](#3-creating-the-sessionsview)
 		* [Creating the Xaml page](#creating-the-xaml-page)
 		* [Creating the Header](#creating-the-header)
