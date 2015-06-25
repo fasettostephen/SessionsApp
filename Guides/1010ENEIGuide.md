@@ -16,7 +16,7 @@
 		* [Using Visual Studio in Windows](#using-visual-studio-in-windows)
 		* [Running the application](#running-the-application)
 		* [Additional notes - Xamarin Forms initialization ](#additional-notes---xamarin-forms-initialization)
-	2. [Creating the model and data source](#2-creating-the-model-and-data-source)
+	2. [Creating the model and the data source](#2-creating-the-model-and-the-data-source)
 	3. [Creating the SessionsView](#3-creating-the-sessionsview)
 		* [Creating the Xaml page](#creating-the-xaml-page)
 		* [Creating the Header](#creating-the-header)
@@ -283,7 +283,8 @@ Depending on the scenario you are, you will have more numbers or less numbers pl
 (*) Is required to a Xamarin Build Host in a Mac connect to Visual Studio.
 
 
-In figure 21, it is possible to see the Android, iOS and the Windows Phone applications running at the same time. The Android app is running in Xamarin Android Player; the iOS app is running in IPhone Simulator and the Windows Phone application is running on a Lumia 1020 device (which is connected to a Windows running in a Parallels, in a Mac).
+In figure 21, it is possible to see the Android, iOS and the Windows Phone applications running at the same time. The Android app is running in Xamarin Android Player; the iOS app is running in IPhone Simulator and the Windows Phone application is running on a Lumia 1020 device (which is connected to a Windows running in a Parallels, in a Mac).
+
 
 ![Xamarin Workshop - Figure 21](ImagesForGuides/figure21.png)
 
@@ -671,7 +672,9 @@ At this moment, you should have
 The next step is to define the list of the session from the 1010 ENEI, in which were defined in the topic “The Data Source”. 
 To show the list of the sessions you will use a ListView which must have:
 
-* The **ItemsSource** which defines the list of sessions* The **ItemTemplate** which defines the template for each row
+* The **ItemsSource** which defines the list of sessions
+* The **ItemTemplate** which defines the template for each row
+
 
 Let’s define the first version of the ListView as following:
 
@@ -1756,7 +1759,9 @@ At this moment if you run the applications you will have something as following:
 ### 8. Changing the App.cs to App.xaml
 
 
-In this step you will learn how to change the **App.cs** to have the **App.xaml** file, which will define the Xamarin Forms application.In the **ENEI.SessionsApp** project is possible to find the App.cs file which define the application. It is a simple class defined in a *.cs file, which can be defined using a XAML approach. For it you need to create a new XAML page as described in figure 51 and figure 52:
+In this step you will learn how to change the **App.cs** to have the **App.xaml** file, which will define the Xamarin Forms application.
+
+In the **ENEI.SessionsApp** project is possible to find the App.cs file which define the application. It is a simple class defined in a *.cs file, which can be defined using a XAML approach. For it you need to create a new XAML page as described in figure 51 and figure 52:
 
 
 ![**Figure 51:** Add new item (using Visual Studio)](ImagesForGuides/figure51.png)
@@ -1766,14 +1771,28 @@ In this step you will learn how to change the **App.cs** to have the **App.xaml*
 **Figure 52: Adding a new Forms Xaml Page called App (using Visual Studio)**
 
 The result will be something as following:
-**App.xaml**
 
-	    <?xml version="1.0" encoding="utf-8" ?>        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             x:Class="ENEI.SessionsApp.App">	       <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />       </ContentPage>
+
+**App.xaml**
+
+	    <?xml version="1.0" encoding="utf-8" ?>
+        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ENEI.SessionsApp.App">
+	       <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+       </ContentPage>
+
 
 **App.xaml.cs**
 
 
-     public partial class App : ContentPage     {        public App()        {            InitializeComponent();        }     }
+     public partial class App : ContentPage
+     {
+        public App()
+        {
+            InitializeComponent();
+        }
+     }
 
 
 At this moment, it is a content page that is not our goal, but it is the workaround to create the App.xaml and App.xaml.cs files. Now to create the Xamarin Forms application based in the XAML approach we need to change the code above, as following:
@@ -1781,70 +1800,385 @@ At this moment, it is a content page that is not our goal, but it is the workaro
 **App.xaml**
 
  
-      <?xml version="1.0" encoding="utf-8" ?>      <Application xmlns="http://xamarin.com/schemas/2014/forms"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             x:Class="ENEI.SessionsApp.App">      </Application>	 **App.xaml.cs**
-    public partial class App : Application    {        public App()        {            InitializeComponent();        }    } With it, you will have to App class that inherits from Xamarin.Forms.Application, to avoid it, you should delete the App.cs file, but before we need to move the code from the App.cs to App.xaml.cs, which result will be something as following:     public class App : Application    {        public App()        {            // The root page of your application            MainPage = new NavigationPage(new SessionsView())            {                  BarBackgroundColor = Color.White,                BarTextColor = Color.Black,                BackgroundColor = Color.White,            };        }        protected override void OnStart()        {            // Handle when your app starts        }        protected override void OnSleep()        {            // Handle when your app sleeps        }        protected override void OnResume()        {            // Handle when your app resumes        }    }If you run the application it must behave as before.
+      <?xml version="1.0" encoding="utf-8" ?>
+      <Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ENEI.SessionsApp.App">
+      </Application>	
+
+ 
+**App.xaml.cs**
+
+
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+        }
+    }
+
+ 
+With it, you will have to App class that inherits from Xamarin.Forms.Application, to avoid it, you should delete the App.cs file, but before we need to move the code from the App.cs to App.xaml.cs, which result will be something as following:
+ 
+    public class App : Application
+    {
+        public App()
+        {
+            // The root page of your application
+            MainPage = new NavigationPage(new SessionsView())
+            {  
+                BarBackgroundColor = Color.White,
+                BarTextColor = Color.Black,
+                BackgroundColor = Color.White,
+            };
+        }
+
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
+
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
+
+
+If you run the application it must behave as before.
 
 ### 9. Using MVVM Pattern
 
 
-In this step you will learn how refactor your code to use the MVVM pattern. > “The Model-View-ViewModel (MVVM) pattern helps you to cleanly separate the business and presentation logic of your application from its user interface (UI). Maintaining a clean separation between application logic and UI helps to address numerous development and design issues and can make your application much easier to test, maintain, and evolve. It can also greatly improve code re-use opportunities and allows developers and UI designers to more easily collaborate when developing their respective parts of the application.” 
->**in MSDN**
-To help understand the MVVM pattern, here is a diagram which explain how it works:![MVVM Pattern diagram](ImagesForGuides/figure53.png)
+In this step you will learn how refactor your code to use the MVVM pattern. 
+
+> “The Model-View-ViewModel (MVVM) pattern helps you to cleanly separate the business and presentation logic of your application from its user interface (UI). Maintaining a clean separation between application logic and UI helps to address numerous development and design issues and can make your application much easier to test, maintain, and evolve. It can also greatly improve code re-use opportunities and allows developers and UI designers to more easily collaborate when developing their respectiv
+e parts of the application.” 
+
+>**in MSDN**
+
+
+To help understand the MVVM pattern, here is a diagram which explain how it works:
+
+![MVVM Pattern diagram](ImagesForGuides/figure53.png)
 
 **Figure 53: MVVM Pattern diagram**
 
-In the Sessions App, you can create two view models, one for each page. To help matching views and view models, in general you should have:* SessionsView will be connected with SessionViewModel* SessionDetailsView will be connected with SessionDetailsViewModelUsually all view models are defined in a **ViewModels** folders, this way any developers will recognize that the application uses MVVM pattern and it is easy to match Views and ViewModels (but any developer is free to organize the application based in application requirements!).Let’s create the view models!In **ENEI.SessionsApp** project, create a folder called **ViewModels**, and then create the class **SessionViewModel**. The result should be something as following:
-![MVVM Pattern diagram](ImagesForGuides/figure54.png)
+In the Sessions App, you can create two view models, one for each page. To help matching views and view models, in general you should have:
+
+* SessionsView will be connected with SessionViewModel
+* SessionDetailsView will be connected with SessionDetailsViewModel
+
+Usually all view models are defined in a **ViewModels** folders, this way any developers will recognize that the application uses MVVM pattern and it is easy to match Views and ViewModels (but any developer is free to organize the application based in application requirements!).
+
+Let’s create the view models!
+
+
+In **ENEI.SessionsApp** project, create a folder called **ViewModels**, and then create the class **SessionViewModel**. The result should be something as following:
+
+
+![MVVM Pattern diagram](ImagesForGuides/figure54.png)
 
 **Figure 54: The view model folder**
 
 Now you need to refactor the code in SessionView.xaml.cs. For it let’s define the SessionViewModel class as following:
 
-    public class SessionViewModel    {        public SessionViewModel()        {            Sessions = new ObservableCollection<Session>();         }        public ObservableCollection<Session> Sessions { get; set; }        public async Task LoadDataAsync()        {           await Task.Run(() =>            {                if (Sessions.Count == 0)                {                    var sessions = SessionsDataSource.GetSessions();                    foreach (var session in sessions)                    {                        Sessions.Add(session);                    }                }            });        }    }
+    public class SessionViewModel
+    {
+        public SessionViewModel()
+        {
+            Sessions = new ObservableCollection<Session>(); 
+        }
+
+        public ObservableCollection<Session> Sessions { get; set; }
+
+        public async Task LoadDataAsync()
+        {
+           await Task.Run(() =>
+            {
+                if (Sessions.Count == 0)
+                {
+                    var sessions = SessionsDataSource.GetSessions();
+                    foreach (var session in sessions)
+                    {
+                        Sessions.Add(session);
+                    }
+                }
+            });
+        }
+    }
 
 
 This way, you defined the Sessions list and the LoadDataAsync in ViewModel, now you need to create the command for each option in the menu.
 
 In the SessionsView.xaml.cs you have the event’s handler from the Tap event (for Like, Favorite, Share and SessionDetails) which are defined in Xaml as following:
 
-    <Image.GestureRecognizers>      <TapGestureRecognizer x:Name="DetailsGesture"                        CommandParameter="{Binding}"                        Tapped="DetailsGesture_OnTapped" />    </Image.GestureRecognizers>
+    <Image.GestureRecognizers>
+      <TapGestureRecognizer x:Name="DetailsGesture"
+                        CommandParameter="{Binding}"
+                        Tapped="DetailsGesture_OnTapped" />
+    </Image.GestureRecognizers>
 
 
 These event’s handle are not friendly for who want implement MVVM pattern, to solve it was create the “ICommand” that allow to call the associate action. This way we need to define the ICommand for each option as following:
 
 
-    public ICommand LikeCommand { get; private set; }    public ICommand FavoriteCommand { get; private set; }    public ICommand ShareCommand { get; private set; }    public ICommand SessionDetailsCommand { get; private set; }
+    public ICommand LikeCommand { get; private set; }
+    public ICommand FavoriteCommand { get; private set; }
+    public ICommand ShareCommand { get; private set; }
+    public ICommand SessionDetailsCommand { get; private set; }
 
 
 And in the constructor is required to initialize each one, as following:
 
-     public SessionViewModel()        {            Sessions = new ObservableCollection<Session>();            LikeCommand = new Command(ApplyLike);            FavoriteCommand = new Command(ApplyFavorite);            ShareCommand = new Command(Share);            SessionDetailsCommand = new Command(SeeSessionDetails);        }
-Where each method above is defined by:       
-        
+     public SessionViewModel()
+        {
+            Sessions = new ObservableCollection<Session>();
+            LikeCommand = new Command(ApplyLike);
+            FavoriteCommand = new Command(ApplyFavorite);
+            ShareCommand = new Command(Share);
+            SessionDetailsCommand = new Command(SeeSessionDetails);
+        }
+
+Where each method above is defined by:       
+
+        
 * **ApplyLike**
 
 
-        private void ApplyLike(object param)        {            var session = param as Session;            if (session != null)            {                session.NumLikes++;            }        }
+        private void ApplyLike(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                session.NumLikes++;
+            }
+        }
 
 
-* **ApplyFavorite**         
-        private void ApplyFavorite(object param)        {            var session = param as Session;            if (session != null)            {                session.IsFavorite = !session.IsFavorite;            }        }
-        
+* **ApplyFavorite** 
+        
+
+        private void ApplyFavorite(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                session.IsFavorite = !session.IsFavorite;
+            }
+        }
+
+        
 * **Share**
 
 
-        private void Share(object param)        {            var session = param as Session;            if (session != null)            {                var shareService = DependencyService.Get<IShareService>();                if (shareService != null)                {                    var status = string.Format("Não percas a sessão {0} de {1}.", session.Name, session.Speaker.Name);                    shareService.ShareLink("ENEI 2015", status, "https://enei.pt/");                }            }        }* **SeeSessionDetails**        private void SeeSessionDetails(object param)        {            var session = param as Session;            if (session != null)            {                MessagingCenter.Send(session, "SeeSessionDetails");            }        }> The MessagingCenter is a class that has the capability to send and receive message. In this case, when a user wants to see the session details the view model will send a message with the session to the view, and then the view will navigate to the SessionDetailsView. 
-> See more about [Publish and Subscribe with MessagingCenter](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/messaging-center/).At the end your **SessionViewModel** class should be defined as following:    public class SessionViewModel    {        public SessionViewModel()        {            Sessions = new ObservableCollection<Session>();            LikeCommand = new Command(ApplyLike);            FavoriteCommand = new Command(ApplyFavorite);            ShareCommand = new Command(Share);            SessionDetailsCommand = new Command(SeeSessionDetails);        }        public ObservableCollection<Session> Sessions { get; set; }        public ICommand LikeCommand { get; private set; }        public ICommand FavoriteCommand { get; private set; }        public ICommand ShareCommand { get; private set; }        public ICommand SessionDetailsCommand { get; private set; }        private void ApplyLike(object param)        {            var session = param as Session;            if (session != null)            {                session.NumLikes++;            }        }        private void ApplyFavorite(object param)        {            var session = param as Session;            if (session != null)            {                session.IsFavorite = !session.IsFavorite;            }        }        private void Share(object param)        {            var session = param as Session;            if (session != null)            {                var shareService = DependencyService.Get<IShareService>();                if (shareService != null)                {                    var status = string.Format("Não percas a sessão {0} de {1}.", session.Name, session.Speaker.Name);                    shareService.ShareLink("ENEI 2015", status, "https://enei.pt/");                }            }        }        private void SeeSessionDetails(object param)        {            var session = param as Session;            if (session != null)            {                MessagingCenter.Send(session, "SeeSessionDetails");            }        }        public async Task LoadDataAsync()        {           await Task.Run(() =>            {                if (Sessions.Count == 0)                {                    var sessions = SessionsDataSource.GetSessions();                    foreach (var session in sessions)                    {                        Sessions.Add(session);                    }                }            });        }    }And the **SessionsView.xaml.cs** should be changed to:    public partial class SessionsView : ContentPage    {        public SessionsView()        {            InitializeComponent();            MessagingCenter.Subscribe<Session>(this, "SeeSessionDetails", session =>            {                Navigation.PushAsync(new SessionDetailsView(session), true);            });        }        protected override async void OnAppearing()        {            base.OnAppearing();            var viewmodel = BindingContext as SessionViewModel;            if (viewmodel != null)            {                await viewmodel.LoadDataAsync();            }        }        private void SessionsList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)        {            //workarround to clean the select item            if (SessionsList.SelectedItem == null)            {                return;            }            SessionsList.SelectedItem = null;        }    }> The event’s handler SessionsList_OnItemSelected will not be changed, because it is a workaround to clean the selected item.
-In the **SessionsView.xaml** is required to do few changes:
-* Define the SessionViewModel as a resource from the page       
-        <ContentPage.Resources>           <ResourceDictionary>            <viewModels:SessionViewModel x:Key="SessionViewModel"/>* Binding the SessionViewModel to the BindingContext from the view
-          <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             xmlns:converters="clr-namespace:ENEI.SessionsApp.Converters;assembly=ENEI.SessionsApp"             xmlns:viewModels="clr-namespace:ENEI.SessionsApp.ViewModels;assembly=ENEI.SessionsApp"             x:Class="ENEI.SessionsApp.Views.SessionsView"             Title="1010 ENEI || Sessões"             BackgroundColor="White"              x:Name="ContentPage"              BindingContext="{StaticResource SessionViewModel}"             Icon="ic_action_users.png">* For each option change the TapGestureRecognizer
-         <TapGestureRecognizer            CommandParameter="{Binding}"            Command="{Binding SessionDetailsCommand, Source={StaticResource SessionViewModel}}"/>
-> The Command is binding to the respective command from the view model, but each developer should be aware that when the view is loaded the binding context from the Image is defined with a Session from the respective listview’s item. For this reason is required to define the binding’s Source, which uses the view model as a static resource (at this moment is not possible to apply relative binding and is not good practice to define the commands in the model object because it belong to the view model!).If you run the application it must behave as before. 
-It is possible to define the view model to the SessionDetailsView, but because it only show a Session and do not have any other capability is not important that change it.
-> To learn more about this subject is recommend to read the following articles:XAML Basics Contents
-*  [Overview](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/#Overview)*  [Part 1. Getting Started with XAML](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/getting_started_with_xaml)*  [Part 2. Essential XAML Syntax](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/essential_xaml_syntax)
-*  [Part 3. XAML Markup Extensions](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/xaml_markup_extensions)*  [Part 4. Data Binding Basics](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_binding_basics)*  [Part 5. From Data Binding to MVVM](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_bindings_to_mvvm)
+        private void Share(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                var shareService = DependencyService.Get<IShareService>();
+                if (shareService != null)
+                {
+                    var status = string.Format("Não percas a sessão {0} de {1}.", session.Name, session.Speaker.Name);
+                    shareService.ShareLink("ENEI 2015", status, "https://enei.pt/");
+                }
+            }
+        }
+
+* **SeeSessionDetails**
+
+        private void SeeSessionDetails(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                MessagingCenter.Send(session, "SeeSessionDetails");
+            }
+        }
+
+
+
+> The MessagingCenter is a class that has the capability to send and receive message. In this case, when a user wants to see the session details the view model will send a message with the session to the view, and then the view will navigate to the SessionDetailsView. 
+
+
+> See more about [Publish and Subscribe with MessagingCenter](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/messaging-center/).
+
+At the end your **SessionViewModel** class should be defined as following:
+
+
+    public class SessionViewModel
+    {
+        public SessionViewModel()
+        {
+            Sessions = new ObservableCollection<Session>();
+            LikeCommand = new Command(ApplyLike);
+            FavoriteCommand = new Command(ApplyFavorite);
+            ShareCommand = new Command(Share);
+            SessionDetailsCommand = new Command(SeeSessionDetails);
+        }
+
+        public ObservableCollection<Session> Sessions { get; set; }
+        public ICommand LikeCommand { get; private set; }
+        public ICommand FavoriteCommand { get; private set; }
+        public ICommand ShareCommand { get; private set; }
+        public ICommand SessionDetailsCommand { get; private set; }
+
+        private void ApplyLike(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                session.NumLikes++;
+            }
+        }
+
+        private void ApplyFavorite(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                session.IsFavorite = !session.IsFavorite;
+            }
+        }
+
+        private void Share(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                var shareService = DependencyService.Get<IShareService>();
+                if (shareService != null)
+                {
+                    var status = string.Format("Não percas a sessão {0} de {1}.", session.Name, session.Speaker.Name);
+                    shareService.ShareLink("ENEI 2015", status, "https://enei.pt/");
+                }
+            }
+        }
+
+        private void SeeSessionDetails(object param)
+        {
+            var session = param as Session;
+            if (session != null)
+            {
+                MessagingCenter.Send(session, "SeeSessionDetails");
+            }
+        }
+
+        public async Task LoadDataAsync()
+        {
+           await Task.Run(() =>
+            {
+                if (Sessions.Count == 0)
+                {
+                    var sessions = SessionsDataSource.GetSessions();
+                    foreach (var session in sessions)
+                    {
+                        Sessions.Add(session);
+                    }
+                }
+            });
+        }
+    }
+
+And the **SessionsView.xaml.cs** should be changed to:
+
+
+    public partial class SessionsView : ContentPage
+    {
+        public SessionsView()
+        {
+            InitializeComponent();
+            MessagingCenter.Subscribe<Session>(this, "SeeSessionDetails", session =>
+            {
+                Navigation.PushAsync(new SessionDetailsView(session), true);
+            });
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            var viewmodel = BindingContext as SessionViewModel;
+            if (viewmodel != null)
+            {
+                await viewmodel.LoadDataAsync();
+            }
+        }
+
+        private void SessionsList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            //workarround to clean the select item
+            if (SessionsList.SelectedItem == null)
+            {
+                return;
+            }
+
+            SessionsList.SelectedItem = null;
+        }
+    }
+
+
+
+> The event’s handler SessionsList_OnItemSelected will not be changed, because it is a workaround to clean the selected item.
+
+
+In the **SessionsView.xaml** is required to do few changes:
+
+
+* Define the SessionViewModel as a resource from the page
+
+       
+
+        <ContentPage.Resources>
+           <ResourceDictionary>
+            <viewModels:SessionViewModel x:Key="SessionViewModel"/>
+
+* Binding the SessionViewModel to the BindingContext from the view
+
+
+          <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:ENEI.SessionsApp.Converters;assembly=ENEI.SessionsApp"
+             xmlns:viewModels="clr-namespace:ENEI.SessionsApp.ViewModels;assembly=ENEI.SessionsApp"
+             x:Class="ENEI.SessionsApp.Views.SessionsView"
+             Title="1010 ENEI || Sessões"
+             BackgroundColor="White" 
+             x:Name="ContentPage" 
+             BindingContext="{StaticResource SessionViewModel}"
+             Icon="ic_action_users.png">
+
+* For each option change the TapGestureRecognizer
+
+         <TapGestureRecognizer 
+           CommandParameter="{Binding}" 
+           Command="{Binding SessionDetailsCommand, Source={StaticResource SessionViewModel}}"/>
+
+> The Command is binding to the respective command from the view model, but each developer should be aware that when the view is loaded the binding context from the Image is defined with a Session from the respective listview’s item. For this reason is required to define the binding’s Source, which uses the view model as a static resource (at this moment is not possible to apply relative binding and is not good practice to define the commands in the model object because it belong to the view model!).
+
+
+If you run the application it must behave as before. 
+
+
+It is possible to define the view model to the SessionDetailsView, but because it only show a Session and do not have any other capability is not important that change it.
+
+
+
+> To learn more about this subject is recommend to read the following articles:
+XAML Basics Contents
+
+
+*  [Overview](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/#Overview)
+*  [Part 1. Getting Started with XAML](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/getting_started_with_xaml)
+*  [Part 2. Essential XAML Syntax](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/essential_xaml_syntax)
+*  [Part 3. XAML Markup Extensions](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/xaml_markup_extensions)
+*  [Part 4. Data Binding Basics](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_binding_basics)
+*  [Part 5. From Data Binding to MVVM](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/Xaml-for-Xamarin-forms/data_bindings_to_mvvm)
 
 
 ### 10. Moving ItemTemplate to Resources
